@@ -3,16 +3,14 @@
 Projeto Final do Curso Técnico Integrado de Desenvolvimento de Sistemas - Colégio Pedro II - Campus Duque de Caxias
 
 **Integrantes:**
- - Fulano
- - Beltrano
- - Ciclano
+ - Guilherme Corrêa da Silva Paixão
+ - Iverson Nascimento Correia
+ - Matheus Siqueira Nunes de Souza
 
  ## Descrição do Projeto
 
- Nunc aliquet lobortis tristique. In pretium nisi vitae viverra venenatis. Ut iaculis sem quis arcu ornare interdum. In id condimentum arcu, sed ornare sem. Aliquam consequat at dolor eget sagittis. Praesent nec ante eget felis porttitor cursus eget suscipit urna. Sed consequat consectetur tristique.
-
-Sed sit amet ante sem. Nunc id sapien metus. Etiam lobortis in purus ut porta. Vestibulum at libero euismod felis feugiat tempus eu sagittis lorem. Vestibulum ultrices, mi euismod eleifend viverra, odio enim volutpat tortor, sed condimentum odio est id purus. Sed at leo vel ligula luctus bibendum in sed justo. Duis sodales consectetur vestibulum. Morbi libero quam, varius ac sodales eget, bibendum eu quam. In accumsan ac turpis vitae porttitor. Nulla eget velit in nisl vulputate sagittis. Phasellus ligula mi, viverra id vehicula nec, varius eget diam. Vestibulum id ultricies nulla, vel sagittis lorem. Sed aliquam dictum lacus quis maximus.
-
+O projeto consiste na reunião de reclamações sobre a Zona Norte do Rio de Janeiro. Os usuários farão postagens sobre acontecimentos inconvenientes que lhes ocorreram durante a vida cotidiana. Por exemplo, ao serem destratados por algum funcionário (seja público ou não), problemas da cidade em geral, como buracos ou falta de reformas, péssimas condições dos ambientes (públic ou não), demora da fila de bancos, entre outros.
+O objetivo do projeto é permitir que a população critique, revele e exponha os problemas da Zona Norte, com o intuito de promover mudanças e tornar a cidade do Rio de Janeiro melhor para o convívio social e para que haja uma melhor qualidade de vida dos cidadãos cariocas.
 ## Documentação
 
 - [Manual do Usuário](manual.md)
