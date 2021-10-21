@@ -4,18 +4,43 @@
 
 ### RF 01
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit nulla vel diam vehicula, eu porttitor nulla aliquam.
+O sistema deverá ser capaz de armazenar de cada usuário: nome, nome de usuário, e-mail e senha.
 
 ### RF 02
 
-Nullam laoreet, mauris ac tempor vulputate, orci metus aliquet augue, at accumsan odio mi eu sapien. Aliquam tincidunt metus ut aliquet vehicula. Aliquam vitae arcu sed lacus fermentum sagittis.
+O sistema deverá ser capaz de realizar um controle de acesso que diferencie usuários de administradores.
+
+### RF 03
+
+O sistema deverá ser capaz de armazenar os dados de todas as postagens de reclamações e comentários feitos pelos usuários.
+
+### RF 04
+
+O sistema deverá ser capaz de registrar os números de "também aconteceu comigo" para cada postagem de reclamação.
+
+### RF 05
+
+O sistema deverá ser capaz de registrar comentários para cada postagem feita no site.
+
+### RF 06
+
+O sistema deverá ser capaz de armazenar fotos de perfil selecionadas pelos usuários.
+
+### RF 07
+
+O sistema deverá ser capaz de exibir as publicações dos usuários em uma timeline.
+
 
 ## Requisitos Não-Funcionais
 
 ### RNF 01
 
-Nulla facilisi. Etiam tempus dolor et odio tincidunt fermentum. Donec pharetra nulla eu euismod maximus. Maecenas eu mauris tincidunt, pulvinar tellus sed, blandit eros.
+O sistema deverá ser desenvolvido como uma plataforma web.
 
 ### RNF 02
 
-Nam id enim ut quam faucibus scelerisque at non diam. Morbi eget eleifend lectus, quis fringilla elit. Morbi iaculis, elit vel accumsan hendrerit, ipsum purus varius lacus, eget facilisis massa mauris ac ipsum.
+O sistema deverá ser predominantemente desenvolvido com a linguagem PHP.
+
+### RNF 03
+
+O sistema deverá armazenar informações em um banco de dados MYSQL.
