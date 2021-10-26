@@ -64,19 +64,19 @@ Log-in de usuários
 
 1. O usuário preenche suas informações pessoais ainda não cadastradas ou incorretamente.
 2. O sistema exibe a mensagem "Informações preenchidas incorretamente ou conta não existente, favor tentar novamente."
-3. O sistema redireciona o usuário para a tela de Log-in novamente para que ele tente reescrever as informações.
+3. O sistema redireciona o usuário para a tela de Log-in novamente para que ele reescreva as informações.
 4. Quisque ac nulla convallis, lobortis nibh ac, tristique enim.
 5. Nulla ultricies metus nec risus mollis, interdum ultrices justo malesuada.
 
 ### CDU 03
 
-Duis nec orci quis velit faucibus hendrerit tempus vel libero.
+Log-out de usuários
 
 **Fluxo Principal**
 
-1. Praesent interdum lectus sit amet augue tincidunt imperdiet.
-2. Duis ac dolor vel nisi imperdiet vehicula et non sem.
-3. Nunc imperdiet tortor consequat, lobortis purus non, interdum risus.
+1. O usuário clica em "Log-out".
+2. O usuário se desconecta sua conta do sistema.
+3. O usuário é redirecionado para a tela de Log-in.
 
 **Fluxo Alternativo A**
 
