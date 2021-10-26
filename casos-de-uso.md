@@ -51,20 +51,20 @@ Cadastro de Usuário
 
 ### CDU 02
 
-Morbi fringilla dolor at mattis vestibulum.
+Log-in de usuários
 
 **Fluxo Principal**
 
-1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-2. Mauris varius massa ac fermentum scelerisque.
-3. Morbi in tortor dignissim, bibendum tellus et, varius odio.
+1. O usuário preenche suas informações pessoais de Log-in corretamente que foram previamente cadastradas.
+2. O usuário clica em Log-in.
+3. O usuário se conecta ao sistema corretamente com sua conta previamente criada.
 4. Mauris egestas leo a suscipit feugiat.
 
 **Fluxo Alternativo A**
 
-1. Nulla elementum diam eu elementum rutrum.
-2. Aenean scelerisque est at nunc ornare, ac condimentum justo sollicitudin.
-3. Quisque eget risus ut est lacinia sollicitudin ac non diam.
+1. O usuário preenche suas informações pessoais ainda não cadastradas ou incorretamente.
+2. O sistema exibe a mensagem "Informações preenchidas incorretamente ou conta não existente, favor tentar novamente."
+3. O sistema redireciona o usuário para a tela de Log-in novamente para que ele tente reescrever as informações.
 4. Quisque ac nulla convallis, lobortis nibh ac, tristique enim.
 5. Nulla ultricies metus nec risus mollis, interdum ultrices justo malesuada.
 
