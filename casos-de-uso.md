@@ -32,9 +32,9 @@ Cadastro de Usuário
 **Fluxo Alternativo A**
 
 1. O usuário preenche as informações com menos caracteres que o necessário.
-2. O programa não permite o cadastro do usuário.
-3. O programa exibe uma mensagem de alerta de acordo com a informação que foi preenchida com menos caracteres.
-3. Maecenas fringilla augue id sodales volutpat.
+2. O sistema não permite o cadastro do usuário.
+3. O sistema exibe uma mensagem de alerta de acordo com a informação que foi preenchida com menos caracteres.
+3. O sistema exibe a tela de cadastro novamente para que o usuário tente se cadastrar novamente.
 4. Nulla vehicula lectus eu eros faucibus porta.
 5. Morbi non sem in diam dictum aliquet sit amet at metus.
 6. Aenean dictum diam in tempus ornare.
@@ -44,7 +44,7 @@ Cadastro de Usuário
 1. O usuário preenche as informações com os mesmo caracteres de log-in que um outro usuário já existente.
 2. O sistema não permite o cadastro do usuário.
 3. O sistema exibe uma mensagem de alerta dizendo "Este e-mail já foi cadastrado." ou "Este usuário já está cadastrado.", dependendo do que for selecionado novamente.
-4. Sed eu massa nec enim condimentum commodo at eget ligula.
+4. O sistema exibe a tela de cadastro novamente para que o usuário tente se cadastrar novamente.
 5. Nam ultricies velit nec erat feugiat condimentum.
 6. Nam vitae lacus porttitor, sodales orci vel, lobortis arcu.
 
