@@ -1,8 +1,3 @@
-<html>
- <head>
-   <title>Hello World</title>
- </head>
- <body>
-   <?php echo "Hello World!";?>
- </body>
+<html> 
+  <a href="html/login.php">clique aqui2</a>
 </html>
