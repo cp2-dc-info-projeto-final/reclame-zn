@@ -85,3 +85,22 @@ Log-out de usuários
 3. Mauris sed purus sit amet lectus efficitur placerat et eu diam.
 4. Aenean ullamcorper tellus quis nibh porttitor congue.
 5. Phasellus laoreet erat eget condimentum dictum.
+
+### CDU 04
+
+Edição de Usuários
+
+**Fluxo Principal**
+
+1. O usuário clica em "Editar cadastro".
+2. O usuário escreve suas novas informações.
+3. O usuário clica em "Enviar".
+4. O sistema atualiza as informações do usuário e exibe a mensagem "Informações atualizadas".
+
+**Fluxo Alternativo A**
+
+1. Aliquam efficitur arcu ac fermentum egestas.
+2. Pellentesque ac diam vitae erat bibendum hendrerit.
+3. Mauris sed purus sit amet lectus efficitur placerat et eu diam.
+4. Aenean ullamcorper tellus quis nibh porttitor congue.
+5. Phasellus laoreet erat eget condimentum dictum.
