@@ -24,4 +24,4 @@ O objetivo do projeto é permitir que a população critique, revele e exponha o
 
 **Modelagem do Banco de Dados**
 
-![Diagrama de Banco de Dados](diagrama-exemplo.png)
+![Diagrama de Banco de Dados](diagrama de classes.png)
