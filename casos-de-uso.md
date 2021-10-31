@@ -3,9 +3,9 @@
 ## Lista dos Casos de Uso
 
  - [CDU 01](#CDU-01): Casos de Uso do Cadastro
- - [CDU 02](#CDU-02): Log-in de usuários
- - [CDU 03](#CDU-03): Log-out de usuários
- - [CDU 03](#CDU-03): dição de Usuários
+ - [CDU 02](#CDU-02): Log-in de Usuários
+ - [CDU 03](#CDU-03): Log-out de Usuários
+ - [CDU 03](#CDU-03): Edição de Usuários
 
 ## Lista dos Atores
 
