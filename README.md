@@ -20,7 +20,7 @@ O objetivo do projeto é permitir que a população critique, revele e exponha o
 
 **Diagrama de Classes**
 
-![Diagrama de Classes](diagrama-exemplo.png)
+![Diagrama de Classes](diagrama_casos_de_uso.jpg)
 
 **Modelagem do Banco de Dados**
 
