@@ -72,7 +72,6 @@ Log-out de usuários
 2. O usuário se desconecta sua conta do sistema.
 3. O usuário é redirecionado para a tela de Log-in.
 
-**Fluxo Alternativo A**
 
 
 
@@ -87,5 +86,4 @@ Edição de Usuários
 3. O usuário clica em "Enviar".
 4. O sistema atualiza as informações do usuário e exibe a mensagem "Informações atualizadas".
 
-**Fluxo Alternativo A**
 
