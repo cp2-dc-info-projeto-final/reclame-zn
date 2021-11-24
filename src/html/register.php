@@ -131,7 +131,7 @@
                                 </label>
                             </div>
                         <div>
-                     <a href="reclamezn/html/login.php" class="txt3">Já possui uma conta?</a>
+                     <a href="login.php" class="txt3">Já possui uma conta?</a>
                     </div>
                     </div>
 
