@@ -12,6 +12,6 @@
             $sql->QuerySQL($query, array(
                 ":id"=> $dados['id']
             ));
-            header("Location: /html/dashboard.php");
+            header("Location: dashboard.php");
             exit;
   }

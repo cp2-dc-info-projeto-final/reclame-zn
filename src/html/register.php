@@ -50,7 +50,7 @@
             ":email" => $email,
             ":senha" => password_hash($senha, PASSWORD_DEFAULT)
         ));
-        header("Location: /html/login.php");
+        header("Location: login.php");
         exit;
     }
 
@@ -86,7 +86,7 @@
         <div class="container-login100">
 
             <div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
-             <form class="login100-form validate-form flex-sb flex-w" action="/html/register.php" method="post">
+             <form class="login100-form validate-form flex-sb flex-w" action="register.php" method="post">
                         <span class="login100-form-title p-b-32">  Registrar-se  </span>
 
 
@@ -131,7 +131,7 @@
                                 </label>
                             </div>
                         <div>
-                     <a href="/html/login.php" class="txt3">Já possui uma conta?</a>
+                     <a href="reclamezn/html/login.php" class="txt3">Já possui uma conta?</a>
                     </div>
                     </div>
 

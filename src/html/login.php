@@ -33,7 +33,7 @@
                 //SALVA AS INFORMAÇÕES DO USUÁRIO NA SESSÃO
                 (new usuario)::SetToSession($results[0]);
                 //REDIRECIONA O USUÁRIO PARA A PÁGINA INICIAL
-                header("Location: /html/dashboard.php");
+                header("Location: dashboard.php");
                 exit;
 
             }else{
@@ -70,7 +70,7 @@
         <div class="container-login100">
 
             <div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
-             <form class="login100-form validate-form flex-sb flex-w" action="/html/login.php" method="post">
+             <form class="login100-form validate-form flex-sb flex-w" action="login.php" method="post">
                         <span class="login100-form-title p-b-32">  Log-in  </span>
                         <span class="txt1 p-b-11"> E-mail </span>
                         <div class="wrap-input100 validate-input m-b-36" data-validate="O e-mail é necessário">
@@ -96,11 +96,12 @@
                                 </label>
                             </div>
                         <div>
-                     <a href="/html/register.php" class="txt3">Não possui uma conta?</a>
+                     <a href="register.php" class="txt3">Não possui uma conta?</a>
                     </div>
                     </div>
 
                     <div class="container-login100-form-btn">
+                       
                        <button class="login100-form-btn" type="submit" name="logar" style="background-color: #14213d;">Conectar-se</button>
                     </div>
              </form>

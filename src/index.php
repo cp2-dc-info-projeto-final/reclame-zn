@@ -1,3 +1,17 @@
+<?php
+        
+        include __DIR__ . '/php/usuario.php';
+        $user_ = new usuario();
+        if(!$user_->checkLogin()){
+            header("Location: html/login.php");
+            exit;
+        }
+        $user = $user_->get();
+
+
+?>  
+
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -70,8 +84,13 @@
 											<nav class="collapse header-mobile-border-top">
 												<ul class="nav nav-pills" id="mainNav">
 															<li>
-																<a class=" btn btn-info" href="/html/dashboard.php">
-																 Logar
+																<a class=" btn btn-info" href="html/dashboard.php">
+																 dashboardaaaaaaa
+																</a>
+															</li>
+															<li>
+																<a class=" btn btn-info" href="html/login.php">
+																 login
 																</a>
 															</li>
 
@@ -167,6 +186,20 @@
 
 				</div>
 			</div>
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
 
 			<footer id="footer">
 				<div class="container container-lg-custom">

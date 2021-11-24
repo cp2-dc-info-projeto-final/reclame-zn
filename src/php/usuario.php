@@ -65,7 +65,7 @@ class usuario{
     */
     public static function desconectar(){
         $_SESSION[self::USER_INFORMATIONS] = null;
-        header("Location: /index.php");
+        header("Location: login.php");
         exit;
     }
     

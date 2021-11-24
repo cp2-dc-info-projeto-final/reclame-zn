@@ -3,7 +3,7 @@
         
         $user_ = new usuario();
         if(!$user_->checkLogin()){
-            header("Location: /html/login.php");
+            header("Location: reclamezn/html/login.php");
             exit;
         }
         $user = $user_->get();
@@ -39,30 +39,30 @@
 		<link id="googleFonts" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CShadows+Into+Light%7CPlayfair+Display:400&display=swap" rel="stylesheet" type="text/css">
 
 		<!-- Vendor CSS -->
-		<link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="/vendor/fontawesome-free/css/all.min.css">
-		<link rel="stylesheet" href="/vendor/animate/animate.compat.css">
-		<link rel="stylesheet" href="/vendor/simple-line-icons/css/simple-line-icons.min.css">
-		<link rel="stylesheet" href="/vendor/owl.carousel/assets/owl.carousel.min.css">
-		<link rel="stylesheet" href="/vendor/owl.carousel/assets/owl.theme.default.min.css">
-		<link rel="stylesheet" href="/vendor/magnific-popup/magnific-popup.min.css">
+		<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../vendor/fontawesome-free/css/all.min.css">
+		<link rel="stylesheet" href="../vendor/animate/animate.compat.css">
+		<link rel="stylesheet" href="../vendor/simple-line-icons/css/simple-line-icons.min.css">
+		<link rel="stylesheet" href="../vendor/owl.carousel/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="../vendor/owl.carousel/assets/owl.theme.default.min.css">
+		<link rel="stylesheet" href="../vendor/magnific-popup/magnific-popup.min.css">
 
 		<!-- Theme CSS -->
-		<link rel="stylesheet" href="/css/theme.css">
-		<link rel="stylesheet" href="/css/theme-elements.css">
-		<link rel="stylesheet" href="/css/theme-blog.css">
-		<link rel="stylesheet" href="/css/theme-shop.css">
+		<link rel="stylesheet" href="../css/theme.css">
+		<link rel="stylesheet" href="../css/theme-elements.css">
+		<link rel="stylesheet" href="../css/theme-blog.css">
+		<link rel="stylesheet" href="../css/theme-shop.css">
 
 
 
 		<!-- Skin CSS -->
-		<link id="skinCSS" rel="stylesheet" href="/css/skins/default.css">
+		<link id="skinCSS" rel="stylesheet" href="../css/skins/default.css">
 
 		<!-- Theme Custom CSS -->
-		<link rel="stylesheet" href="/css/custom.css">
+		<link rel="stylesheet" href="../css/custom.css">
 
 		<!-- Head Libs -->
-		<script src="/vendor/modernizr/modernizr.min.js"></script>
+		<script src="../vendor/modernizr/modernizr.min.js"></script>
 
 	</head>
 	<body data-plugin-page-transition class="dark">
@@ -92,7 +92,7 @@
 											<nav class="collapse header-mobile-border-top">
 												<ul class="nav nav-pills" id="mainNav">
                                                             <li>
-																<a class="btn btn-info" href="/html/editar.php">
+																<a class="btn btn-info" href="editar.php">
 																 Editar Informações da minha conta
 																</a>
 															</li>
@@ -104,13 +104,13 @@
 							</div>
 							<div class="header-column header-column-border-left flex-grow-0 justify-content-center">
 								<div class="justify-content-end">
-                                        <a class="btn btn-danger text-white font-weight-bold" href="/html/desconectar.php">Desconectar</a>
+                                        <a class="btn btn-danger text-white font-weight-bold" href="desconectar.php">Desconectar</a>
 								</div>
                                 
 							</div>
                             <div class="header-column header-column-border-left flex-grow-0 justify-content-center">
 								<div class="justify-content-end">
-                                        <a class="btn btn-info text-white font-weight-bold" href="/index.php">Voltar</a>
+                                        <a class="btn btn-info text-white font-weight-bold" href="login.php">Voltar</a>
 								</div>
 							</div>
 						</div>
@@ -142,35 +142,35 @@
             
 
             <!-- Vendor -->
-            <script src="/vendor/jquery/jquery.min.js"></script>
-            <script src="/vendor/jquery.appear/jquery.appear.min.js"></script>
-            <script src="/vendor/jquery.easing/jquery.easing.min.js"></script>
-            <script src="/vendor/jquery.cookie/jquery.cookie.min.js"></script>
-            <script src="/vendor/popper/umd/popper.min.js"></script>
-            <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
-            <script src="/vendor/jquery.validation/jquery.validate.min.js"></script>
-            <script src="/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
-            <script src="/vendor/jquery.gmap/jquery.gmap.min.js"></script>
-            <script src="/vendor/lazysizes/lazysizes.min.js"></script>
-            <script src="/vendor/isotope/jquery.isotope.min.js"></script>
-            <script src="/vendor/owl.carousel/owl.carousel.min.js"></script>
-            <script src="/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-            <script src="/vendor/vide/jquery.vide.min.js"></script>
-            <script src="/vendor/vivus/vivus.min.js"></script>
-            <script src="/vendor/jquery.instagramfeed/jquery.instagramFeed.min.js"></script>
+            <script src="../vendor/jquery/jquery.min.js"></script>
+            <script src="../vendor/jquery.appear/jquery.appear.min.js"></script>
+            <script src="../vendor/jquery.easing/jquery.easing.min.js"></script>
+            <script src="../vendor/jquery.cookie/jquery.cookie.min.js"></script>
+            <script src="../vendor/popper/umd/popper.min.js"></script>
+            <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+            <script src="../vendor/jquery.validation/jquery.validate.min.js"></script>
+            <script src="../vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+            <script src="../vendor/jquery.gmap/jquery.gmap.min.js"></script>
+            <script src="../vendor/lazysizes/lazysizes.min.js"></script>
+            <script src="../vendor/isotope/jquery.isotope.min.js"></script>
+            <script src="../vendor/owl.carousel/owl.carousel.min.js"></script>
+            <script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+            <script src="../vendor/vide/jquery.vide.min.js"></script>
+            <script src="../vendor/vivus/vivus.min.js"></script>
+            <script src="../vendor/jquery.instagramfeed/jquery.instagramFeed.min.js"></script>
 
             <!-- Theme Base, Components and Settings -->
-            <script src="/js/theme.js"></script>
+            <script src="../js/theme.js"></script>
 
             
             <!-- Theme Custom -->
-            <script src="/js/custom.js"></script>
+            <script src="../js/custom.js"></script>
 
             <!-- Theme Initialization Files -->
-            <script src="/js/theme.init.js"></script>
+            <script src="../js/theme.init.js"></script>
 
             <!-- Examples -->
-            <script src="/js/examples/examples.instagramFeed.js"></script>
+            <script src="../js/examples/examples.instagramFeed.js"></script>
 
 	</body>
 </html>
