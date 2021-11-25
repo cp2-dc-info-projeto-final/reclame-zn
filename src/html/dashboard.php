@@ -74,14 +74,19 @@
             }
         </style>
 
-		<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
-				<div class="header-body border-top-0 header-color" >
+		<<header style="background-color:#14213D;" id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
+				<div style="background-color:#14213D;" class="header-body border-top-0">
 					<div class="header-container container-fluid px-lg-4">
-						<div class="header-row">
-							<div class="header-column header-column-border-right flex-grow-0">
+						<div class="header-row" style="background-color:#14213D;">
+							<div  class="header-column header-column-border-right flex-grow-0">
 								<div class="header-row pr-4">
 									<div class="header-logo">
-										 <!-- COLOCAR A LOGO AQUI -->
+										
+									<a href="../index.php"> 
+										<img alt="RECLAMEZN" src="../img/header/logo.png" class="btn" height="85" width="105">
+						  
+										</a>	
+										
 									</div>
 								</div>
 							</div>
@@ -91,11 +96,7 @@
 										<div class="header-nav-main header-nav-main-square header-nav-main-effect-2 header-nav-main-sub-effect-1">
 											<nav class="collapse header-mobile-border-top">
 												<ul class="nav nav-pills" id="mainNav">
-                                                            <li>
-																<a class="btn btn-info" href="editar.php">
-																 Editar Informações da minha conta
-																</a>
-															</li>
+                                                            
 												</ul>
 											</nav>
 										</div>
@@ -104,13 +105,19 @@
 							</div>
 							<div class="header-column header-column-border-left flex-grow-0 justify-content-center">
 								<div class="justify-content-end">
-                                        <a class="btn btn-danger text-white font-weight-bold" href="desconectar.php">Desconectar</a>
+                                        <a class="btn text-white font-weight-bold"  style='background-color:#FCA311;' href="desconectar.php">Desconectar</a>
+								</div>
+                                
+							</div>
+							<div class="header-column header-column-border-left flex-grow-0 justify-content-center">
+								<div class="justify-content-end">
+                                        <a class="btn text-white font-weight-bold"  style='background-color:#FCA311;' href="editar.php">Editar Minha Conta</a>
 								</div>
                                 
 							</div>
                             <div class="header-column header-column-border-left flex-grow-0 justify-content-center">
 								<div class="justify-content-end">
-                                        <a class="btn btn-info text-white font-weight-bold" href="login.php">Voltar</a>
+                                        <a class="btn btn-info text-white font-weight-bold" href="../index.php">Voltar</a>
 								</div>
 							</div>
 						</div>

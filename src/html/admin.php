@@ -27,8 +27,8 @@
                                                 echo "<td>".$row['id']."</td>";
                                                 echo "<td>".$row['nome']."</td>";
                                                 echo "<td>".$row['email']."</td>";
-                                                echo "<td><a class='btn btn-success' href='editar.php?id=".$row['id']."'>Editar Usuário"."</a></td>";
-                                                echo "<td><a class='btn btn-info' href='editar-privilegio.php?id=".$row['id']."'>Editar Privilégio e Senha"."</a></td>";
+                                                echo "<td><a class='btn text-white' style='background-color:#FCA311;' href='editar.php?id=".$row['id']."'>Editar Usuário"."</a></td>";
+                                                echo "<td><a class='btn text-white' style='background-color:#FCA311;' href='editar-privilegio.php?id=".$row['id']."'>Editar Privilégio e Senha"."</a></td>";
                                                 echo "<td><a class='btn btn-danger' href='deletar.php?id=".$row['id']."'>Deletar Usuário"."</a></td>";
                                             }
                                          ?>

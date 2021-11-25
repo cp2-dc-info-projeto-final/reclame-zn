@@ -66,14 +66,18 @@
 	</head>
 	<body data-plugin-page-transition>
 		<div class="body">
-		<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
-				<div class="header-body border-top-0">
+		<header style="background-color:#14213D;" id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
+				<div style="background-color:#14213D;" class="header-body border-top-0">
 					<div class="header-container container-fluid px-lg-4">
-						<div class="header-row">
-							<div class="header-column header-column-border-right flex-grow-0">
+						<div class="header-row" style="background-color:#14213D;">
+							<div  class="header-column header-column-border-right flex-grow-0">
 								<div class="header-row pr-4">
 									<div class="header-logo">
-                      <!-- COLOCAR A LOGO AQUI -->
+										
+									<a href="../reclamezn/index.php"> 
+									<img alt="RECLAMEZN" src="img/header/logo.png" class="btn" height="85" width="105">
+                      
+									</a>	
 									</div>
 								</div>
 							</div>
@@ -83,16 +87,9 @@
 										<div class="header-nav-main header-nav-main-square header-nav-main-effect-2 header-nav-main-sub-effect-1">
 											<nav class="collapse header-mobile-border-top">
 												<ul class="nav nav-pills" id="mainNav">
-															<li>
-																<a class=" btn btn-info" href="html/dashboard.php">
-																 dashboardaaaaaaa
-																</a>
-															</li>
-															<li>
-																<a class=" btn btn-info" href="html/login.php">
-																 login
-																</a>
-															</li>
+													
+
+								
 
 
                               <!-- ÁREA DE PESQUISA -->
@@ -101,10 +98,10 @@
                                   <div class="container">
                                     <div class="row h-100 d-flex">
                                       <div class="col h-100 d-flex">
-                                        <form role="search" class="d-flex h-100 w-100" action="page-search-results.html" method="get">
+                                        <form role="search" class="d-flex h-100 w-100" action="html/busca.php" method="post">
                                           <div class="big-search-header input-group">
-                                            <input class="form-control text-1" id="headerSearch" name="q" type="search" value="" placeholder="Type and hit enter...">
-                                            <a href="#" class="header-nav-features-search-hide-icon"><i class="fas fa-times header-nav-top-icon"></i></a>
+                                            <input class="form-control text-1" id="headerSearch" name="pesquisar" type="search" value="" placeholder="Digite o nome do usuário...">
+                                            
                                           </div>
                                         </form>
                                       </div>
@@ -120,12 +117,30 @@
 									</div>
 								</div>
 							</div>
-							<div class="header-column header-column-border-left flex-grow-0 justify-content-center">
+														<!--DASHBOARD-->
+														<div class="header-column header-column-border-left flex-grow-0 justify-content-center">
+									<div class="header-column header-column-border-right flex-grow-0 justify-content-center">
+										<div class="justify-content-end">
+											<a style="background-color:#FCA311;" class="btn btn text-white font-weight-bold" href="html/dashboard.php">Dashboard</a>
+										</div>
+									</div>
+								</div>
+														<!--DESCONECTAR-->
+														<div class="header-column header-column-border-left flex-grow-0 justify-content-center">
+									<div class="header-column header-column-border-right flex-grow-0 justify-content-center">
+										<div class="justify-content-end">
+											<a style="background-color:#FCA311;" class="btn text-white font-weight-bold" href="html/desconectar.php">Desconectar</a>
+										</div>
+									</div>
+								</div>
+				<div class="header-column header-column-border-left flex-grow-0 justify-content-center">
+
+							<!--BUSCAR USUÁRIO-->
 								<div class="header-row pl-4 justify-content-end">
-									<div class="header-nav-features">
+									<div class="header-nav-"></div>
 										<div class="header-nav-features-search-reveal-container">
 											<div class="header-nav-feature header-nav-features-search header-nav-features-search-reveal d-inline-flex">
-											<a href="#" class="header-nav-features-search-show-icon d-inline-flex text-decoration-none btn btn-warning text-dark font-weight-bold">Buscar Usuário </a>
+											<a href="#" style="background-color:#E5E5E5;" class="header-nav-features-search-show-icon d-inline-flex text-decoration-none btn text-dark font-weight-bold">Buscar Usuário </a>
 											</div>
 										</div>
 									 </div>
@@ -138,13 +153,13 @@
 
 			<div role="main" class="main">
 				
-
+			<!--INÍCIO DOS POSTS-->
 				<div class="container container-fluid">
 					
 					<div class="row mt-5 pt-3">
 						<div class="col-md-12">
 							<div class="blog-posts">
-
+								<!--IMAGEM DOS POSTS-->
 									<div class="post-image">
 										<a href="blog-post.html">
 											<img src="img/blog/wide/blog-54.jpg" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="How to Make Friends as a Grown-Up" />
@@ -153,7 +168,7 @@
 
 <hr>
 									<div class="post-content">
-
+										<!--NOME DOS POSTS-->
 										<h2 class="font-weight-semibold text-6 line-height-3 mb-3"><a href="blog-post.html" class="text-color-dark text-color-hover-primary">GSEGLJM.REGJKL43JGK54KLJRGJKR4EGVJKR4LJGLRJETGKJH,4R5ERT
 
 										</a></h2>
@@ -169,7 +184,7 @@
 									</div>
 								</article>
 								
-								
+								<!--BARRA QUE FICA EMBAIXO DO POST-->
 
 								<ul class="pagination float-right">
 									<li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
@@ -204,7 +219,7 @@
 			<footer id="footer">
 				<div class="container container-lg-custom">
 					<div class="footer-ribbon">
-						<span>Get in Touch</span>
+						<span>Se liga</span>
 					</div>
 					<div class="row py-5 my-4">
 						<div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
@@ -218,9 +233,9 @@
 				<div class="footer-copyright">
 					<div class="container container-lg-custom py-2">
 						<div class="row py-4">
-							<div class="col-lg-1 d-flex align-items-center justify-content-center justify-content-lg-start mb-2 mb-lg-0">
+							<div class="col-lg-1 d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-lg-0">
 								<a href="index.html" class="logo pr-0 pr-lg-3">
-									<img alt="RECLAMEZN" src="img/logo-footer.png" class="opacity-5" height="32">
+									<h5 alt=""  class="opacity-10" height="32"> RECLAMEZN </h5>
 								</a>
 							</div>
 							<div class="col-lg-7 d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-lg-0">
@@ -228,11 +243,7 @@
 							</div>
 							<div class="col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end">
 								<nav id="sub-menu">
-									<ul>
-										<li><i class="fas fa-angle-right"></i><a href="page-faq.html" class="ml-1 text-decoration-none"> FAQ's</a></li>
-										<li><i class="fas fa-angle-right"></i><a href="sitemap.html" class="ml-1 text-decoration-none"> Sitemap</a></li>
-										<li><i class="fas fa-angle-right"></i><a href="contact-us.html" class="ml-1 text-decoration-none"> Contact Us</a></li>
-									</ul>
+									
 								</nav>
 							</div>
 						</div>
