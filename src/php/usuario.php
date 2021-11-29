@@ -1,6 +1,7 @@
 <?php
 
 
+
 class usuario{
 
     CONST USER_INFORMATIONS = 'USER_GLOBAL_DATA_INFORMATION';
@@ -36,7 +37,7 @@ class usuario{
     */
     public static function get($user = null){
         if($user){
-            include __DIR__."/../sql/sql.php";
+            require_once __DIR__."/../sql/sql.php";
             $sql = new Sql();
             $query = "SELECT * FROM tb_usuarios WHERE id = :id";
             return $sql->select($query, [':id' => $user])[0];

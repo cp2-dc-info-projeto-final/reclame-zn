@@ -190,7 +190,7 @@
 
 
                                         <tbody>
-
+										
                                         <?php
                                             
                                             $pesquisar = $_POST['pesquisar'];
@@ -198,15 +198,20 @@
                                             $query = "SELECT * FROM tb_usuarios WHERE nome LIKE '%$pesquisar%'";
 										
 
-
+											
 											foreach($sql->select($query) as $row){
+												$id=$row['id'];
+												$nome=$row['nome'];
                                                 echo "<tr>";
-                                                echo "<td>".$row['id']."</td>";
-                                                echo "<td>".$row['nome']."</td>";
+                                                echo "<td> $id</td>";
+                                                echo "<td>$nome </td>";
+												echo "<td> <a href='timeline.php?id=$id'> Perfil </a>";
+												
                                                 
                                             }
                                          ?>
 
 
                                         </tbody>
+										
                                         </table>

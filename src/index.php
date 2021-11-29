@@ -1,6 +1,6 @@
 <?php
-        
-        include __DIR__ . '/php/usuario.php';
+        date_default_timezone_set('America/Sao_Paulo');
+        require_once __DIR__ . '/php/usuario.php';
         $user_ = new usuario();
         if(!$user_->checkLogin()){
             header("Location: html/login.php");
@@ -14,6 +14,7 @@
 
 <!DOCTYPE html>
 <html>
+	
 	<head>
 
 		<!-- Basic -->
@@ -159,40 +160,21 @@
 					<div class="row mt-5 pt-3">
 						<div class="col-md-12">
 							<div class="blog-posts">
-								<!--IMAGEM DOS POSTS-->
-									<div class="post-image">
-										<a href="blog-post.html">
-											<img src="img/blog/wide/blog-54.jpg" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="How to Make Friends as a Grown-Up" />
-										</a>
-									</div>
+								
 
-<hr>
+
 									<div class="post-content">
 										<!--NOME DOS POSTS-->
-										<h2 class="font-weight-semibold text-6 line-height-3 mb-3"><a href="blog-post.html" class="text-color-dark text-color-hover-primary">GSEGLJM.REGJKL43JGK54KLJRGJKR4EGVJKR4LJGLRJETGKJH,4R5ERT
-
-										</a></h2>
-										<p>EHSEDHÇKERKOHG´45ERHKPT4R 4KRGYJIOKERP TRHY5KOP4</p>
-
-										<div class="post-meta">
-											<span><i class="far fa-user"></i> GEAS <a href="#">HRWEHER</a> </span>
-											
-											<span><i class="far fa-comments"></i> <a href="#">1HSDAHSDHDSH DSGDS</a></span>
+										<?php require_once ("html/postagem.php");?>
 										
-										</div>
+										
 
 									</div>
 								</article>
 								
-								<!--BARRA QUE FICA EMBAIXO DO POST-->
+								
 
-								<ul class="pagination float-right">
-									<li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
-									<li class="page-item active"><a class="page-link" href="#">1</a></li>
-									<li class="page-item"><a class="page-link" href="#">2</a></li>
-									<li class="page-item"><a class="page-link" href="#">3</a></li>
-									<li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
-								</ul>
+								
 
 							</div>
 						</div>
