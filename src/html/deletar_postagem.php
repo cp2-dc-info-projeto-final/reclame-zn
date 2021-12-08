@@ -9,8 +9,8 @@
             print_r ($dados);
             */
             $sql = new Sql();
-            $query = "DELETE FROM tb_postagens WHERE idpostagem = :id";
-            $sql->QuerySQL($query, array(
+            $query_comentario = "DELETE FROM tb_postagens WHERE idpostagem = :id";
+            $sql->QuerySQL($query_comentario, array(
                 ":id"=> $dados['idpostagem']
             ));
             header("Location: ../index.php");
