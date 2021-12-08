@@ -75,7 +75,7 @@
 								<div class="header-row pr-4">
 									<div class="header-logo">
 										
-									<a href="../reclamezn/index.php"> 
+									<a href="../src/index.php"> 
 									<img alt="RECLAMEZN" src="img/header/logo.png" class="btn" height="85" width="105">
                       
 									</a>	
