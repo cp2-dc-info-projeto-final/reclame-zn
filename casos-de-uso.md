@@ -20,7 +20,7 @@
  - [CDU 16](#CDU-16): Edição de Comentários
  - [CDU 17](#CDU-17): Exlusão de Comentários
  - [CDU 18](#CDU-18): Curtidas de Postagens e Comentários
- - [CDU 19](#CDU-19): Remoção de Curidas de Postagens e Comentários
+ - [CDU 19](#CDU-19): Remoção de Curtidas de Postagens e Comentários
  
  
 ## Lista dos Atores
