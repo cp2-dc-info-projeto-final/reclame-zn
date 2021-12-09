@@ -18,10 +18,6 @@ O objetivo do projeto é permitir que a população critique, revele e exponha o
 - [Casos de Uso](casos-de-uso.md)
 - [Apresentação](apresentacao.pdf)
 
-**Diagrama de Classes**
-
-![Diagrama de Classes](diagrama_casos_de_uso.jpg)
-
 **Modelagem do Banco de Dados**
 
 ![Diagrama de Banco de Dados](diagrama_de_classes.png)
