@@ -64,7 +64,9 @@ foreach($result as $row){
                       $nomeusuariop= $row['nomep'];
                       $idusuario= $row['idusuario'];
                       $idpostagem = $row['idpostagem'];
+                      $curtida = $row['curtida'];
                       echo "<span><i class='far fa-user'></i> $nomeusuariop </span>";
+                      
 											
 										  echo "<span><i class= 'far fa-comments'></i> " .$row['tempop']."</span>";
                       
@@ -78,8 +80,8 @@ foreach($result as $row){
                        {  
                          echo "&nbsp;&nbsp;&nbsp;<a class='btn btn-warning' href='html/editar_postagem.php?id=".$row['idpostagem']."'>Editar Postagem"."</a>";
                        }
-
-
+                       echo "&nbsp;&nbsp;&nbsp;<a class='far fa-user' href='html/curtir_postagem.php?id=".$row['idpostagem']."'>Curtir Postagem"."</a>";
+                       echo "&nbsp;&nbsp;&nbsp; $curtida";
 //////////////////////////////////////////////////////////////////////
 
 
@@ -128,6 +130,8 @@ foreach($result as $row){
                        {  
                          echo "&nbsp;&nbsp;&nbsp;<a class='btn btn-warning' href='html/editar_comentario.php?id=".$row_comentario['idcomentario']."'>Editar Comentário"."</a>";
                        }
+                       echo "&nbsp;&nbsp;&nbsp;<a class='far fa-user' href='html/curtir_comentario.php?id=".$row_comentario['idcomentario']."'>Editar Comentário"."</a>";
+                       
                     
 /*
                      if($user_->isAdmin() ||( $user['id'] == $idusuario)  )

@@ -75,11 +75,8 @@
 								<div class="header-row pr-4">
 									<div class="header-logo">
 										
-<<<<<<< HEAD
 									<a href="../src/index.php"> 
-=======
 									<a href="index.php"> 
->>>>>>> e9b4422470b8e16bea9a8c198888518608282388
 									<img alt="RECLAMEZN" src="img/header/logo.png" class="btn" height="85" width="105">
                       
 									</a>	
