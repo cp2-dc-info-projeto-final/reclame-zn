@@ -35,14 +35,38 @@ class curtida_comentario{
      * @param array
      * @return null
     */
-    public static function get($user = null){
-        if($user){
+    public static function get($comentario = null, $usuario = null){
+        if($usuario){
             require_once __DIR__."/../sql/sql.php";
             $sql = new Sql();
-            $query = "SELECT * FROM tb_curtida_comentario WHERE idcomentario = :id";
-            return $sql->select($query, [':id' => $user])[0];
+            $query = "SELECT * FROM tb_curtidas_comentarios WHERE idcomentario = :idcomentario and idusuario = :idusuario";
+            echo "$query <br>";
+            echo "usuario  - $usuario<br>";
+            echo "idcomentario  - $comentario<br>";
+
+          $res =   $sql->select($query, array
+        (
+            ":idcomentario" => $comentario,
+            ":idusuario" => $usuario
+            
+        )
+        );
+
+
+
+
+          //   $res = $sql->select($query, [':id' => $usuario]);
+            if(isset($res[0]))
+            {
+                return $res[0];
+            }
+            else
+            {
+                return 0;
+            }
+            //return $sql->select($query, [':id' => $user])[0];
         }else{
-            return $_SESSION[postagem::USER_INFORMATIONS] ;
+            return $_SESSION[comentario::USER_INFORMATIONS] ;
         }
     }
 

@@ -145,6 +145,14 @@
 									</div>
 								</div>
 							</div>
+							   					<!--FAQ-->
+												   <div class="header-column header-column-border-left flex-grow-0 justify-content-center">
+									<div class="header-column header-column-border-right flex-grow-0 justify-content-center">
+										<div class="justify-content-end">
+											<a style="background-color:#FCA311;" class="btn btn text-white font-weight-bold" href="faq.php">F.A.Q.</a>
+										</div>
+									</div>
+								</div>
 														<!--DASHBOARD-->
 														<div class="header-column header-column-border-left flex-grow-0 justify-content-center">
 									<div class="header-column header-column-border-right flex-grow-0 justify-content-center">

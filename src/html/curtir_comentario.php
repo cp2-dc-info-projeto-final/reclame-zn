@@ -6,7 +6,7 @@
 
 
         include __DIR__ . '/../php/usuario.php';
-        include __DIR__ . '/../php/comentario.php';
+        include __DIR__ . '/../php/curtida_comentario.php';
         
         $user_ = new usuario();
         if(!$user_->checkLogin()){
@@ -17,34 +17,47 @@
 
 
 
-
         if(isset($_GET['id'])){
 
-            $comentario = new comentario();
+            $curtida_comentario = new curtida_comentario();
 
-
-
-            $idcomentario = $_GET['id'];
 
             
-            $dados = $comentario->get($_GET['id']);
-            $comentario_texto = $dados['comentario_texto'];
-        }
+            $idcomentario = $_GET['id'];
+            echo "$idcomentario get <br>";
+            $idcurtida = 0;
+            $dados = $curtida_comentario->get( $_GET['id'],$user['id'] );
+            print_r($dados);
+            if(isset($dados))
+        {
+            if($dados <> 0)
+            {
+                $idcurtida = $dados['idcurtida'];
+                
+            }
 
-if(isset($_POST['registrar'])){
-    //RECEBE OS DADOS DO FORMULÁRIO
-    $comentario = $_POST['comentario'];
-    $idcomentario = $_POST['idcomentario'];
-    //VERIFICA SE O CAMPO NOME ESTÁ VAZIO
-    if(empty($comentario)){
-        echo "O campo é obrigatório!";
+            
+
+        }
+        
     }
+        
+
+//if(isset($_POST['registrar']))
+    {
+    //RECEBE OS DADOS DO FORMULÁRIO
+    //$postagem = $_POST['postagem'];
+    //$idpostagem = $_POST['idpostagem'];
+    //VERIFICA SE O CAMPO NOME ESTÁ VAZIO
+    //if(empty($postagem)){
+    //    echo "O campo é obrigatório!";
+    //}
 
     
     
 
     //INCLUI A CLASSE SQL NO CÓDIGO
-    include __DIR__."/../sql/sql.php";
+    require_once (__DIR__."/../sql/sql.php");
     $sql = new Sql();
     $agora = date("Y-m-d h:i:s");
 /*
@@ -67,22 +80,74 @@ if(isset($_POST['registrar'])){
   //  ));
 
 
-
-    $query = "UPDATE  tb_comentario SET comentario_texto = :comentario_texto, comentario_tempo = :comentario_tempo WHERE idcomentario = :idcomentario";
-//    echo "<hr>";                    
-//    echo "$query";
-//    echo "<hr>";   
-    
-    $sql->QuerySQL($query, array
-    (
-        ":comentario_texto" => $comentario,
-        ":comentario_tempo" => $agora,
-        ":idcomentario" => $idcomentario
+if($idcurtida == 0){
+    $query = "INSERT INTO tb_curtidas_comentarios (idusuario, idcomentario) VALUES (:idusuario, :idcomentario)";
+    //$query = "UPDATE  tb_postagens SET postagem_texto = :postagem_texto, postagem_tempo = :postagem_tempo WHERE idpostagem = :idpostagem";
+    //    echo "<hr>";                    
+        echo "$query <br>";
+        $usuario = $user['id'];
+        echo "usuario : $usuario";
+        //echo "$user['id']";
+    //    echo "<hr>";   
         
-  
-    )
-);
-    header("Location: ../index.php");
+        $sql->QuerySQL($query, array
+        (
+            ":idusuario" => $user['id'],
+            ":idcomentario" => $idcomentario
+            
+        )
+        );
+        
+        $query = "UPDATE  tb_comentario SET curtida = curtida+1 WHERE idcomentario = :idcomentario";
+    //$query = "UPDATE  tb_postagens SET postagem_texto = :postagem_texto, postagem_tempo = :postagem_tempo WHERE idpostagem = :idpostagem";
+    //    echo "<hr>";                    
+        echo "$query";
+    //    echo "<hr>";   
+        
+        $sql->QuerySQL($query, array
+        (
+            
+            ":idcomentario" => $idcomentario
+            
+        )
+        );
+    
+}
+    else{
+
+        //$query = "INSERT INTO tb_curtidas_postagens (idusuario, idcurtida, idpostagem) VALUES (:idusuario, :idcurtida, :idpostagem)";
+        $query = "DELETE FROM tb_curtidas_comentarios WHERE idcurtida = :idcurtida";
+        //    echo "<hr>";                    
+        //    echo "$query";
+        //    echo "<hr>";   
+        echo "$query <br>";
+        $usuario = $user['id'];
+        echo "usuario : $usuario";
+            $sql->QuerySQL($query, array
+            (
+                
+                ":idcurtida" => $idcurtida
+                
+                
+            )
+            );
+
+            $query = "UPDATE  tb_comentario SET curtida = curtida -1 WHERE idcomentario = :idcomentario";
+            //$query = "UPDATE  tb_postagens SET postagem_texto = :postagem_texto, postagem_tempo = :postagem_tempo WHERE idpostagem = :idpostagem";
+            //    echo "<hr>";                    
+            //   echo "$query";
+            //    echo "<hr>";   
+                
+                $sql->QuerySQL($query, array
+                (
+                    
+                    ":idcomentario" => $idcomentario
+                    
+                )
+                );
+    }
+
+    //header("Location: ../index.php");
     exit;
 }
 
@@ -114,40 +179,7 @@ if(isset($_POST['registrar'])){
 
 
 <body>
-<div class="limiter">
-    <div class="container-login100">
 
-        <div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
-         <form class="login100-form validate-form flex-sb flex-w" action="editar_comentario.php" method="post">
-         <input type=hidden name =idcomentario value = "<?php echo "$idcomentario";?>" >
-                    <span class="login100-form-title p-b-32">  Editar seu Comentário  </span>
-
-
-                    <span class="txt1 p-b-11"> </span>
-                    <div class="wrap-input100 validate-input m-b-36" data-validate="O e-mail é necessário">
-                       
-                        <textarea name="comentario" id="comentario" cols="40" rows="10"><?php echo "$comentario_texto";?></textarea>
-                        <span class="focus-input100"></span>
-                    </div>
-
-
-                   
-
-                 
-
-
-                    
-               
-
-                <div class="container-login100-form-btn">
-                   <button class="login100-form-btn" type="submit" name="registrar">Enviar</button>
-                </div>
-         </form>
-        </div>
-    </div>
-</div>
-
-<div id="dropDownSelect1"></div>
 
 <script src="https://colorlib.com/etc/lf/Login_v14/vendor/jquery/jquery-3.2.1.min.js"></script>
 <script src="https://colorlib.com/etc/lf/Login_v14/vendor/animsition/js/animsition.min.js"></script>
