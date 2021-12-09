@@ -126,7 +126,7 @@ foreach($result as $row){
                     echo "<span><i class= 'far fa-comments'></i> " .$row_comentario['tempoc']."</span>";
                     if($user_->isAdmin() ||( $user['id'] == $idusuario)  )
                        {  
-                         echo "&nbsp;&nbsp;&nbsp;<a class='btn btn-danger' href='html/deletar_comentario.php?id=".$row_comentario['idcomentario']."'>Deletar Comentário"."</a>";
+                         echo "&nbsp;&nbsp;&nbsp;<a class='btn btn-danger' href='html/deletar_comentario.php?id=".$row_comentario['idcomentario']."'>Apagar Comentário"."</a>";
                        }
                        if( $user['id'] == $idusuario)  
                        {  
