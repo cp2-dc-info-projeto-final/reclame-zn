@@ -64,7 +64,7 @@
                     <span class="login100-form-title p-b-32">  Atualizar dados</span>
 
                     <span class="txt1 p-b-11"> Nova Senha </span>
-                    <div class="wrap-input100 validate-input m-b-36" data-validate="O e-mail é necessário">
+                    <div class="wrap-input100 validate-input m-b-36" data-validate="Uma nova senha é necessária">
                         <input class="input100" type="password" name="senha" >
                         <span class="focus-input100"></span>
                     </div>
