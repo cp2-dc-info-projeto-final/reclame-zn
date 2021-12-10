@@ -150,6 +150,7 @@
 				</div>
 			</header>
 
+			<!--PERGUNTAS E RESPOSTAS DO FAQ-->
             <div>
                 <p style="font-size:300%; color: black;  padding-left: 30px; padding-bottom: 0px; padding-top:40px;">-Qual o objetivo da ReclameZN?</p>
 
@@ -169,23 +170,13 @@
             </div>
 
             <div>
-                <p style="font-size:300%;color: black;">Que?</p>
+                <p style="font-size:300%; color: black;  padding-left: 30px; padding-bottom: 0px;">Quem são os responsáveis pela ReclameZN?</p>
 
-                <p style="font-size:200% ;">Jo!</p>
+                <p style="font-size:200% ; padding-left: 20px; padding-bottom: 12px;">Somos estudantes do colégio Pedro II, moradores da Zona Norte do Rio de Janeiro, indignados com a atual infraestrutura da cidade.</p>
             </div>
             
-            <div>
-                <p style="font-size:300%;color: black;">Que?</p>
-
-                <p style="font-size:200% ;">Jo!</p>
-            </div>
             
-
-
-
-
-
-
+            
 
             <footer id="footer">
 				<div class="container container-lg-custom">

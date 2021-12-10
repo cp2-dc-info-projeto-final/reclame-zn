@@ -47,31 +47,12 @@ if(isset($_POST['registrar'])){
     include __DIR__."/../sql/sql.php";
     $sql = new Sql();
     $agora = date("Y-m-d h:i:s");
-/*
-    echo "<hr>";                    
-    echo "$idpostagem";
-    echo "<hr>"; 
-    echo "<hr>";                    
-    echo "$postagem";
-    echo "<hr>"; 
-
-    echo "<hr>";                    
-    echo "$agora";
-    echo "<hr>"; 
-*/
- //   $atualiza_dados = "UPDATE tb_postagens SET postagem_texto = :postagem_texto, postagem_tempo = :postagem_tempo WHERE idpostagem = :idpostagem" ;
- //   $sql->QuerySQL($atualiza_dados, array(
-  //      ":nome" => $nome,
-   //     ":email" => $email,
-   //     ":id" => $_POST['id']
-  //  ));
 
 
 
+    //QUERY QUE ATUALIZA O COMENTÁRIO
     $query = "UPDATE  tb_comentario SET comentario_texto = :comentario_texto, comentario_tempo = :comentario_tempo WHERE idcomentario = :idcomentario";
-//    echo "<hr>";                    
-//    echo "$query";
-//    echo "<hr>";   
+  
     
     $sql->QuerySQL($query, array
     (

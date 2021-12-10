@@ -83,7 +83,9 @@ foreach($result as $row){
                        }
                        echo "&nbsp;&nbsp;&nbsp;<a class='far fa-heart' href='html/curtir_postagem.php?id=".$row['idpostagem']."'>"."</a>";
                        echo " $curtida";
-//////////////////////////////////////////////////////////////////////
+
+
+
 
 //QUERY DOS COMENTARIOS
                        $query_comentario ="SELECT    tc.idcomentario,tc.comentario_texto, tc.curtida, tc.idusuario,
@@ -136,28 +138,14 @@ foreach($result as $row){
                        
                        echo " $curtida";
                     
-/*
-                     if($user_->isAdmin() ||( $user['id'] == $idusuario)  )
-                     {  
-                       echo "&nbsp;&nbsp;&nbsp;<a class='btn btn-danger' href='html/deletar_comentario.php?id=".$row_comentario['idcomentario']."'>Deletar Comentário"."</a>";
-                     }
-                     if( $user['id'] == $idusuario)  
-                     {  
-                       echo "&nbsp;&nbsp;&nbsp;<a class='btn btn-warning' href='html/editar_comentario.php?id=".$row_comentario['idcomentario']."'>Editar Comentário"."</a>";
-                     }
-                     */
-                     
-                    //echo "</div> </div> </article> </div></div></div> </div>";
-                     
-                     
-                     //echo "<hr>";
+
                   ?>
                   </div>
 
                 </div>
               </article>
               
-              <!--número de páginas (separador de páginas)-->
+            
 
 
 
@@ -179,19 +167,7 @@ foreach($result as $row){
 									</div>
 								</article>
 								
-								<!--número de páginas (separador de páginas)-->
-
-
-
-<!--
-								<ul class="pagination float-right">
-									<li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
-									<li class="page-item active"><a class="page-link" href="#">1</a></li>
-									<li class="page-item"><a class="page-link" href="#">2</a></li>
-									<li class="page-item"><a class="page-link" href="#">3</a></li>
-									<li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
-								</ul>
--->
+							
 							</div>
 						</div>
 						

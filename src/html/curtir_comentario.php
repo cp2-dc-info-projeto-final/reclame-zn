@@ -43,16 +43,9 @@
     }
         
 
-//if(isset($_POST['registrar']))
-    {
-    //RECEBE OS DADOS DO FORMULÁRIO
-    //$postagem = $_POST['postagem'];
-    //$idpostagem = $_POST['idpostagem'];
-    //VERIFICA SE O CAMPO NOME ESTÁ VAZIO
-    //if(empty($postagem)){
-    //    echo "O campo é obrigatório!";
-    //}
 
+    {
+   
     
     
 
@@ -60,35 +53,16 @@
     require_once (__DIR__."/../sql/sql.php");
     $sql = new Sql();
     $agora = date("Y-m-d h:i:s");
-/*
-    echo "<hr>";                    
-    echo "$idpostagem";
-    echo "<hr>"; 
-    echo "<hr>";                    
-    echo "$postagem";
-    echo "<hr>"; 
-
-    echo "<hr>";                    
-    echo "$agora";
-    echo "<hr>"; 
-*/
- //   $atualiza_dados = "UPDATE tb_postagens SET postagem_texto = :postagem_texto, postagem_tempo = :postagem_tempo WHERE idpostagem = :idpostagem" ;
- //   $sql->QuerySQL($atualiza_dados, array(
-  //      ":nome" => $nome,
-   //     ":email" => $email,
-   //     ":id" => $_POST['id']
-  //  ));
 
 
+//INCLUI A CURTIDA
 if($idcurtida == 0){
     $query = "INSERT INTO tb_curtidas_comentarios (idusuario, idcomentario) VALUES (:idusuario, :idcomentario)";
-    //$query = "UPDATE  tb_postagens SET postagem_texto = :postagem_texto, postagem_tempo = :postagem_tempo WHERE idpostagem = :idpostagem";
-    //    echo "<hr>";                    
+                    
         echo "$query <br>";
         $usuario = $user['id'];
         echo "usuario : $usuario";
-        //echo "$user['id']";
-    //    echo "<hr>";   
+        
         
         $sql->QuerySQL($query, array
         (
@@ -97,12 +71,11 @@ if($idcurtida == 0){
             
         )
         );
-        
+        //ATUALIZA A CURTIDA ADICIONADA
         $query = "UPDATE  tb_comentario SET curtida = curtida+1 WHERE idcomentario = :idcomentario";
-    //$query = "UPDATE  tb_postagens SET postagem_texto = :postagem_texto, postagem_tempo = :postagem_tempo WHERE idpostagem = :idpostagem";
-    //    echo "<hr>";                    
+                     
         echo "$query";
-    //    echo "<hr>";   
+       
         
         $sql->QuerySQL($query, array
         (
@@ -113,13 +86,12 @@ if($idcurtida == 0){
         );
     
 }
+//REMOVE A CURTIDA
     else{
 
-        //$query = "INSERT INTO tb_curtidas_postagens (idusuario, idcurtida, idpostagem) VALUES (:idusuario, :idcurtida, :idpostagem)";
+       
         $query = "DELETE FROM tb_curtidas_comentarios WHERE idcurtida = :idcurtida";
-        //    echo "<hr>";                    
-        //    echo "$query";
-        //    echo "<hr>";   
+         
         echo "$query <br>";
         $usuario = $user['id'];
         echo "usuario : $usuario";
@@ -131,12 +103,9 @@ if($idcurtida == 0){
                 
             )
             );
-
+//ATUALIZA A CURTIDA RETIRADA
             $query = "UPDATE  tb_comentario SET curtida = curtida -1 WHERE idcomentario = :idcomentario";
-            //$query = "UPDATE  tb_postagens SET postagem_texto = :postagem_texto, postagem_tempo = :postagem_tempo WHERE idpostagem = :idpostagem";
-            //    echo "<hr>";                    
-            //   echo "$query";
-            //    echo "<hr>";   
+            
                 
                 $sql->QuerySQL($query, array
                 (

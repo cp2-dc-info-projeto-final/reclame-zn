@@ -114,14 +114,7 @@
                     <input type="hidden" name="id" value="<?php echo $dados['id'] ?>" >
 
 
-                    <!-- <span class="txt1 p-b-11">Nova senha</span>
-                    <div class="wrap-input100 validate-input m-b-12" data-validate="A senha é necessária">
-                        <span class="btn-show-pass">
-                        <i class="fa fa-eye"></i>
-                        </span>
-                        <input class="input100" type="password" name="senha">
-                        <span class="focus-input100"></span>
-                    </div> -->
+                    
 
 
                 <div class="container-login100-form-btn">

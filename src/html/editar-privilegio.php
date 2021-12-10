@@ -72,6 +72,8 @@
                     <span class="txt1 p-b-11">Privilégio</span>
                     <div class="wrap-input100 validate-input m-b-36" data-validate="O privilégio é necessário">
                         <select name="privilegio" class="input100">
+                            <!--SEPARA USUARIO COMUM DE ADMINISTRADOR-->
+
                             <option value="0" <?php echo $dados['acesso'] == 0? '' : 'selected' ?>>Usuário Comum</option>
                             <option value="1" <?php echo $dados['acesso'] == 1 ? 'selected' : '' ?>>Administrador</option>
                         </select>

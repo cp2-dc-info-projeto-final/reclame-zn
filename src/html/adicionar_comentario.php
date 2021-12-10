@@ -19,7 +19,7 @@
 
 
             $idpostagem = $_POST['id'];
-           // echo "$idpostagem post";
+           
             
             
         }
@@ -30,7 +30,7 @@
 
 
             $idpostagem = $_GET['id'];
-           // echo "$idpostagem get";
+           
             
             
         }
@@ -49,8 +49,8 @@ if(isset($_POST['registrar'])){
     //INCLUI A CLASSE SQL NO CÓDIGO
     include __DIR__."/../sql/sql.php";
     $sql = new Sql();
-    $agora = date("Y-m-d h:i:s");
-    //echo "<br> $idpostagem";
+    $agora = date("Y-m-d H:i:s");
+    
     $query = "INSERT INTO tb_comentario (idpostagem, idusuario, comentario_texto, comentario_tempo) VALUES (:idpostagem, :idusuario, :comentario_texto, :comentario_tempo)";
     $sql->QuerySQL($query, array(
 
