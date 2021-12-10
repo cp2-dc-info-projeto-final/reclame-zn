@@ -171,12 +171,12 @@
 					</div>
 					<div class="row py-5 my-4">
 						<div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-							<a href="html/redes_sociais.php">
+							<a href="redes_sociais.php">
 							<h5 class="text-3 mb-3">Desenvolvedores</h5>
 							</a>
 							<p>Veja o perfil dos nossos desenvolvedores</p>
 							
-							<p class="mb-0"><a href="html/faq.php" class="btn-flat btn-xs text-color-light p-relative top-5"><strong class="text-2">F.A.Q. ZN</strong><i class="fas fa-angle-right p-relative top-1 pl-2"></i></a></p>
+							<p class="mb-0"><a href="faq.php" class="btn-flat btn-xs text-color-light p-relative top-5"><strong class="text-2">F.A.Q. ZN</strong><i class="fas fa-angle-right p-relative top-1 pl-2"></i></a></p>
 						</div>
 					</div>
 				</div>
