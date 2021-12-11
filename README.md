@@ -13,10 +13,10 @@ O projeto consiste na reunião de reclamações sobre a Zona Norte do Rio de Jan
 O objetivo do projeto é permitir que a população critique, revele e exponha os problemas da Zona Norte, com o intuito de promover mudanças e tornar a cidade do Rio de Janeiro melhor para o convívio social e para que haja uma melhor qualidade de vida dos cidadãos cariocas.
 
 ## Versões
-PHP: 8.0.12
-MySQL: 10.4.21
-Apache: 2.4.51
-PHPMyAdmin: 5.1.1
+- PHP: 8.0.12
+- MySQL: 10.4.21
+- Apache: 2.4.51
+- PHPMyAdmin: 5.1.1
 
 ## Documentação
 
