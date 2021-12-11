@@ -1,18 +1,18 @@
 # Manual do Usuário
 
-Nullam vitae velit a eros dignissim bibendum id a enim. Vestibulum hendrerit nisl sed magna gravida, non elementum urna condimentum. Quisque porta tincidunt nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis at varius mauris. Quisque molestie ante imperdiet elit blandit, ac volutpat sem efficitur. Donec nec sem tempus, ullamcorper nisl non, blandit tortor. Etiam suscipit rutrum laoreet. Donec facilisis eros ultrices, venenatis quam nec, feugiat ante. Donec ante eros, consequat nec nibh vitae, porta vehicula orci. Duis nec eros et lorem malesuada sodales. Praesent auctor accumsan ipsum, et volutpat ex porttitor eu. Vestibulum facilisis elementum elit, hendrerit mollis velit pretium in. Curabitur tristique vel augue a sodales. Sed malesuada lacinia porttitor.
+O projeto consiste na reunião de reclamações sobre a Zona Norte do Rio de Janeiro. Os usuários farão postagens sobre acontecimentos inconvenientes que lhes ocorreram durante a vida cotidiana. Por exemplo, ao serem destratados por algum funcionário (seja público ou não), problemas da cidade em geral, como buracos ou falta de reformas, péssimas condições dos ambientes (público ou não), demora da fila de bancos, entre outros. O objetivo do projeto é permitir que a população critique, revele e exponha os problemas da Zona Norte, com o intuito de promover mudanças e tornar a cidade do Rio de Janeiro melhor para o convívio social e para que haja uma melhor qualidade de vida dos cidadãos cariocas.
 
 **Lista das Funcionalidades:**
 
- - [Funcionalidade X](#Funcionalidade-X)
+ - [Cadastro](#Página-de-cadastro)
  - [Funcionalidade Y](#Funcionalidade-Y)
  - [Funcionalidade Z](#Funcionalidade-Z)
 
-## Funcionalidade X
+## Página de Cadastro
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus volutpat molestie justo non tincidunt. Praesent tristique, elit convallis eleifend congue, nisl ex lobortis lorem, ac gravida tellus lacus eu enim. Aliquam urna turpis, convallis id turpis et, iaculis consequat nunc. Proin elit orci, imperdiet nec tristique nec, tincidunt ut nibh. Donec dignissim urna ut erat imperdiet aliquam. Vestibulum augue leo, pellentesque malesuada egestas quis, molestie at lacus. Donec rhoncus finibus lorem, accumsan interdum sapien facilisis sit amet. Integer odio magna, sodales at varius at, dapibus vitae ante. Sed ac ullamcorper ex. Ut in metus ipsum. Duis vulputate porta mi, id venenatis massa ornare vel. Nunc ornare malesuada elit sed feugiat.
+Ao entrar no site, você será redirecionado para a tela de cadastro de usuários, onde deverá passar algumas informações simples para conseguir se registar com sucesso à rede Reclame ZN. Veja abaixo a tela de cadastro.
 
-Aliquam in convallis quam, egestas consectetur felis. Integer in dolor sit amet neque volutpat faucibus ut porttitor libero. Morbi faucibus non purus nec finibus. Pellentesque lacus nunc, ultricies quis enim at, vehicula semper nibh. Ut eget erat blandit, porta nibh sit amet, facilisis felis. Aliquam vitae consequat nisi, ut vestibulum sapien. Sed ornare quis leo quis cursus. Vestibulum ut quam odio. Donec sit amet risus augue. Curabitur venenatis a tortor ac placerat.
+![Página de Cadastro](img-manual/cadastro.jpeg)
 
 ## Funcionalidade Y
 
