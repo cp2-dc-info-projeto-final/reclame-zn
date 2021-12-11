@@ -8,8 +8,8 @@ O projeto consiste na reunião de reclamações sobre a Zona Norte do Rio de Jan
  - [Página de Login](#página-de-login)
  - [Página de Dashboard](#página-de-dashboard)
  - [Página Inicial](#página-inicial)
- - [Busca de Usuários](#busca-de-usuarios)
- - [F.A.Q](#f.a.q)
+ - [Busca de Usuários](#busca-de-usuários)
+ - [F.A.Q](#F.A.Q)
 
 ## Página de Cadastro
 
