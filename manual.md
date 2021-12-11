@@ -9,7 +9,7 @@ O projeto consiste na reunião de reclamações sobre a Zona Norte do Rio de Jan
  - [Página de Dashboard](#página-de-dashboard)
  - [Página Inicial](#página-inicial)
  - [Busca de Usuários](#busca-de-usuários)
- - [F.A.Q](#F.A.Q)
+ - [Página de Dúvidas](#página-de-dúvidas)
 
 ## Página de Cadastro
 
@@ -41,7 +41,7 @@ Esta é a busca de usuários. Aqui o internauta consegue buscar por pessoas digi
 
 ![Busca de Usuários](src/img/manual/busca.jpeg)
 
-## F.A.Q
+## Página de Dúvidas
 
 Se ainda restarem algumas dúvidas, visite a nossa página do F.A.Q e veja se a sua dúvida já se encontra presente.
 
