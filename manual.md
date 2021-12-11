@@ -4,21 +4,21 @@ O projeto consiste na reunião de reclamações sobre a Zona Norte do Rio de Jan
 
 **Lista das Funcionalidades:**
 
- - [Cadastro](#Página-de-cadastro)
- - [Funcionalidade Y](#Funcionalidade-Y)
+ - [Cadastro](#página-de-cadastro)
+ - [Login](#página-de-login)
  - [Funcionalidade Z](#Funcionalidade-Z)
 
 ## Página de Cadastro
 
-Ao entrar no site, você será redirecionado para a tela de cadastro de usuários, onde deverá passar algumas informações simples para conseguir se registar com sucesso à rede Reclame ZN. Veja abaixo a tela de cadastro.
+Ao entrar no site, você será redirecionado para a tela de cadastro de usuários, onde deverá informar nome, email e senha para conseguir se registar com sucesso à rede Reclame ZN. Veja abaixo a tela de cadastro.
 
-![Página de Cadastro](img-manual/cadastro.jpeg)
+![Página de Cadastro](src/img/manual/cadastro.jpeg)
 
-## Funcionalidade Y
+## Página de Login
 
-In vestibulum euismod orci, vitae mollis neque luctus vel. Aliquam erat volutpat. Pellentesque nulla elit, iaculis posuere interdum a, imperdiet sollicitudin dui. Morbi consectetur cursus dictum. Etiam vel feugiat tortor, non tempor nibh. Nam eu massa libero. Donec id eleifend justo, tempus consectetur augue. Phasellus porttitor ex leo. Proin efficitur ante vel tortor tempus ornare. Cras molestie, velit non laoreet lobortis, nisl metus volutpat augue, id dictum libero ipsum a mi. Quisque eget tristique felis.
+Após ter efetuado o cadastro com sucesso, você será redirecionado para a página de login, onde deverá informar o email e senha novamente. Veja abaixo a tela de login. 
 
-Donec auctor a orci a semper. Nunc consequat dui vel eros faucibus molestie. Praesent euismod purus nec justo iaculis varius. Integer vehicula ac metus at ultricies. Maecenas pulvinar neque sed est sollicitudin, vitae dignissim magna posuere. Sed consectetur, mi nec bibendum sodales, urna sem aliquam leo, mollis vulputate justo leo vel nunc. Sed lacinia ipsum lacus, ultrices iaculis tellus efficitur at. Proin consectetur orci ac egestas aliquam. Proin dignissim euismod turpis sollicitudin interdum. Mauris pellentesque, orci non accumsan lobortis, nunc felis hendrerit tortor, non rutrum risus nisl id erat.
+![Página de Login](src/img/manual/login.jpeg)
 
 ## Funcionalidade Z
 
