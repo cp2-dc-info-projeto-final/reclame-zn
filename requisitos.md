@@ -4,7 +4,7 @@
 
 ### RF 01
 
-O sistema deverá ser capaz de armazenar de cada usuário: nome, nome de usuário, e-mail e senha.
+O sistema deverá ser capaz de armazenar de cada usuário: nome, e-mail e senha.
 
 ### RF 02
 
@@ -16,7 +16,7 @@ O sistema deverá ser capaz de armazenar os dados de todas as postagens de recla
 
 ### RF 04
 
-O sistema deverá ser capaz de registrar os números de "também aconteceu comigo" para cada postagem de reclamação.
+O sistema deverá ser capaz de registrar os números de curtidas para cada postagem de reclamação.
 
 ### RF 05
 
@@ -24,11 +24,8 @@ O sistema deverá ser capaz de registrar comentários para cada postagem feita n
 
 ### RF 06
 
-O sistema deverá ser capaz de armazenar fotos de perfil selecionadas pelos usuários.
-
-### RF 07
-
 O sistema deverá ser capaz de exibir as publicações dos usuários em uma timeline.
+
 
 
 ## Requisitos Não-Funcionais
