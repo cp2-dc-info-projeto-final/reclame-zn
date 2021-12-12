@@ -16,17 +16,19 @@ O sistema deverá ser capaz de armazenar os dados de todas as postagens de recla
 
 ### RF 04
 
-O sistema deverá ser capaz de registrar os números de curtidas para cada postagem de reclamação.
+O sistema deverá ser capaz de registrar os números de curtidas para cada postagem de reclamação, se limitando a uma curtida por usuário.
 
 ### RF 05
 
-O sistema deverá ser capaz de registrar comentários para cada postagem feita no site.
+O sistema deverá ser capaz de registrar comentários para cada postagem feita no site, se limitando a uma curtida por usuário.
 
 ### RF 06
 
+O sistema deverá ser capaz de realizar pesquisa por caracteres-chave e exibir os usuários como resultado.
+
+### RF 07
+
 O sistema deverá ser capaz de exibir as publicações dos usuários em uma timeline.
-
-
 
 ## Requisitos Não-Funcionais
 
