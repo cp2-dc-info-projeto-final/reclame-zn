@@ -69,7 +69,7 @@ Esta é a busca de usuários. Aqui o internauta consegue buscar por pessoas digi
 
 Página com a timeline de um usuário selecionado após a busca. (Exemplo da timeline do Iverson Correia)
 
-![F.A.Q](src/img/manual/timeline.png)
+![F.A.Q](src/img/manual/exemplo_timeline.png)
 
 ## Página de Dúvidas
 
