@@ -216,11 +216,10 @@ Exibição de Timeline de Usuários
 
 **Fluxo Principal**
 
-1. O usuário faz o log-in.
-2. O usuário é redirecionado ao "Dashboard".
-3. O usuário clica em "Voltar".
-4. O sistema redireciona o usuário para a página inicial.
-5. A timeline do usuário é exibida.
+1. O usuário pesquisa o nome do usuário que deseja ver a timeline.
+2. O usuário seleciona "Ver perfil".
+3. A timeline do usuário específico selecionado é exibida.
+
 
 
 
@@ -264,7 +263,7 @@ Curtidas de Postagens e Comentários
 
 **Fluxo Principal**
 
-1. O usuário clica em "Curtir".
+1. O usuário clica no ícone de curtir.
 2. O sistema armazena a curtida na postagem ou comentário.
 
 
@@ -274,7 +273,7 @@ Remoção de Curidas de Postagens e Comentários
 
 **Fluxo Principal**
 
-1. O usuário clica em "Remover Curtida".
+1. O usuário clica no ícone de curtir.
 2. O sistema remove a curtida do usuário.
 
 
