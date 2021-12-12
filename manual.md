@@ -73,7 +73,7 @@ Página com a timeline de um usuário selecionado após a busca. (Exemplo da tim
 
 ## Página de Dúvidas
 
-Se ainda restarem algumas dúvidas, visite a nossa página do F.A.Q e veja se a sua dúvida já se encontra presente.
+Se ainda restarem algumas dúvidas, visite a nossa página do F.A.Q. e veja se a sua dúvida já se encontra presente.
 
 ![F.A.Q](src/img/manual/faq.jpeg)
 
