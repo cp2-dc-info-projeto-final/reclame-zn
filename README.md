@@ -21,20 +21,20 @@ O objetivo do projeto é permitir que a população critique, revele e exponha o
 
 ## Usuários com Permissão de Admin
 ### Ygor
-- email: ygor@gmail.com
+- e-mail: ygor@gmail.com
 - senha: ygor
 
 ### Alayne
-- email: alayne@gmail.com
+- e-mail: alayne@gmail.com
 - senha: alayne
 
 ### Clécio
-- email: clecio@gmail.com
+- e-mail: clecio@gmail.com
 - senha: clecio
 
 ## Usuários sem Permissão de Admin
 ### Usuário Comum
-- email: usuario@gmail.com
+- e-mail: usuario@gmail.com
 - senha: usuario
 
 ## Documentação
