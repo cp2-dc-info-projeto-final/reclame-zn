@@ -31,9 +31,33 @@ Se você conseguiu se cadastrar e inseriu os dados da conta corretamente, a tela
 
 ## Página Inicial
 
-Esta é a página inicial, onde aparece a opção de busca, realizar postagens, cometários e outros.
+Esta é a página inicial, onde aparecem as opções de busca, realizar postagens, realizar cometários e outros.
 
 ![Página Inicial](src/img/manual/index.jpeg)
+
+## Página de Adicionar Postagem
+
+Página utilizada para adicionar postagens.
+
+![F.A.Q](src/img/manual/postagem.png)
+
+## Página de Adicionar Comentário
+
+Página utilizada para adicionar comentários à postagens já feitas.
+
+![F.A.Q](src/img/manual/comentario.png)
+
+## Página de Editar Postagem
+
+Página utilizada para editar postagens já criadas.
+
+![F.A.Q](src/img/manual/editar_postagem.png)
+
+## Página de Editar Comentário
+
+Página utilizada para editar comentários já criados.
+
+![F.A.Q](src/img/manual/editar_comentario.png)
 
 ## Busca de Usuários
 
@@ -41,8 +65,15 @@ Esta é a busca de usuários. Aqui o internauta consegue buscar por pessoas digi
 
 ![Busca de Usuários](src/img/manual/busca.jpeg)
 
+## Timeline de Usuários
+
+Página com a timeline de um usuário selecionado após a busca.
+
+![F.A.Q](src/img/manual/timeline.png)
+
 ## Página de Dúvidas
 
 Se ainda restarem algumas dúvidas, visite a nossa página do F.A.Q e veja se a sua dúvida já se encontra presente.
 
 ![F.A.Q](src/img/manual/faq.jpeg)
+
