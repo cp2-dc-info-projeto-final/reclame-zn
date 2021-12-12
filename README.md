@@ -20,22 +20,22 @@ O objetivo do projeto é permitir que a população critique, revele e exponha o
 - Xampp: 3.3.0
 
 ## Usuários com Permissão de Admin
--Ygor
-email: ygor@gmail.com
-senha: ygor
+- Ygor
+- email: ygor@gmail.com
+- senha: ygor
 
--Alayne
-email: alayne@gmail.com
-senha: alayne
+- Alayne
+- email: alayne@gmail.com
+- senha: alayne
 
--Clécio
-email: clecio@gmail.com
-senha: clecio
+- Clécio
+- email: clecio@gmail.com
+- senha: clecio
 
 ## Usuários sem Permissão de Admin
--Usuário Comum
-email: usuario@gmail.com
-senha: usuario
+- Usuário Comum
+- email: usuario@gmail.com
+- senha: usuario
 
 ## Documentação
 
