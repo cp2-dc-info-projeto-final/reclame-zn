@@ -17,6 +17,7 @@ O objetivo do projeto é permitir que a população critique, revele e exponha o
 - MySQL: 10.4.21
 - Apache: 2.4.51
 - PHPMyAdmin: 5.1.1
+- Xampp: 3.3.0
 
 ## Documentação
 
