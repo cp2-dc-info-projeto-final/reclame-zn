@@ -46,7 +46,7 @@ if(isset($_POST['registrar'])){
     //INCLUI A CLASSE SQL NO CÓDIGO
     include __DIR__."/../sql/sql.php";
     $sql = new Sql();
-    $agora = date("Y-m-d h:i:s");
+    $agora = date("Y-m-d H:i:s");
 
 
 
