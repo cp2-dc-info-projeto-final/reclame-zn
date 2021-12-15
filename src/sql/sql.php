@@ -5,8 +5,8 @@ class Sql extends \PDO{
 
     const DBNAME = "db_reclamezn";
     const HOST = "localhost";
-    const USERNAME = "root";
-    const PASSWORD = "";
+    const USERNAME = "admin";
+    const PASSWORD = "admin123";
 
 
 
