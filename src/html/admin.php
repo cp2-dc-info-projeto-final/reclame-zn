@@ -8,7 +8,7 @@
                                             <th scope="col">#ID</th>
                                             <th scope="col">NOME</th>
                                             <th scope="col">E-MAIL</th>
-                                            <th scope="col">EDITAR </th>
+                                            <th scope="col">EDITAR USUÁRIO</th>
                                             <th scope="col">CONCEDER PRIVILÉGIO</th>
                                             <th scope="col">DELETAR </th>
                                             </tr>
@@ -28,7 +28,7 @@
                                                 echo "<td>".$row['nome']."</td>";
                                                 echo "<td>".$row['email']."</td>";
                                                 echo "<td><a class='btn text-white' style='background-color:#FCA311;' href='editar.php?id=".$row['id']."'>Editar Usuário"."</a></td>";
-                                                echo "<td><a class='btn text-white' style='background-color:#FCA311;' href='editar-privilegio.php?id=".$row['id']."'>Editar Privilégio e Senha"."</a></td>";
+                                                echo "<td><a class='btn text-white' style='background-color:#FCA311;' href='editar-privilegio.php?id=".$row['id']."'>Editar Privilégio"."</a></td>";
                                                 echo "<td><a class='btn btn-danger' href='deletar.php?id=".$row['id']."'>Deletar Usuário"."</a></td>";
                                             }
                                          ?>

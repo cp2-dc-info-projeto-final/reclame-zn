@@ -19,6 +19,7 @@
 
 
             $idpostagem = $_POST['id'];
+            $destino = $_POST['destino'];
            
             
             
@@ -30,7 +31,7 @@
 
 
             $idpostagem = $_GET['id'];
-           
+            //$destino = $_GET['destino'];
             
             
         }
@@ -60,7 +61,15 @@ if(isset($_POST['registrar'])){
         ":comentario_tempo" => $agora
         
     ));
+    $usuario = $user['id'];
+    echo "<br> usuario ($usuario)";
+
+    if($destino == ""){
     header("Location: ../index.php");
+    }
+    else{
+        header("Location: timeline.php?id=$usuario");
+    }
     exit;
 }
 

@@ -20,11 +20,14 @@
         if(isset($_GET['id'])){
 
             $curtida_comentario = new curtida_comentario();
-
+            
+            $destino = $_GET['destino'];
 
             
             $idcomentario = $_GET['id'];
             echo "$idcomentario get <br>";
+            $idpostagem = $_GET['idpostagem'];
+            echo "$idpostagem get <br>";
             $idcurtida = 0;
             $dados = $curtida_comentario->get( $_GET['id'],$user['id'] );
             print_r($dados);
@@ -57,7 +60,7 @@
 
 //INCLUI A CURTIDA
 if($idcurtida == 0){
-    $query = "INSERT INTO tb_curtidas_comentarios (idusuario, idcomentario) VALUES (:idusuario, :idcomentario)";
+    $query = "INSERT INTO tb_curtidas_comentarios (idusuario, idcomentario, idpostagem) VALUES (:idusuario, :idcomentario, :idpostagem)";
                     
         echo "$query <br>";
         $usuario = $user['id'];
@@ -67,7 +70,8 @@ if($idcurtida == 0){
         $sql->QuerySQL($query, array
         (
             ":idusuario" => $user['id'],
-            ":idcomentario" => $idcomentario
+            ":idcomentario" => $idcomentario,
+            ":idpostagem" => $idpostagem
             
         )
         );
@@ -116,8 +120,13 @@ if($idcurtida == 0){
                 );
     }
 
-    header("Location: ../index.php");
-    exit;
+    if($destino == ""){
+        header("Location: ../index.php");
+        }
+        else{
+            header("Location: timeline.php?id=$usuario");
+        }
+        exit;
 }
 
 

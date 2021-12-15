@@ -68,18 +68,21 @@
 	</head>
     <body data-plugin-page-transition>
         <div class="body">
-        <header style="background-color:#14213D;" id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
+        <header style="background-color:#14213D;" id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 100}">
                 <div style="background-color:#14213D;" class="header-body border-top-0">
                     <div class="header-container container-fluid px-lg-4">
                         <div class="header-row" style="background-color:#14213D;">
                             <div  class="header-column header-column-border-right flex-grow-0">
                                 <div class="header-row pr-4">
-                                    <div class="header-logo">
-                                        
-                                    <a href="../index.php"> 
-                                    <img alt="RECLAMEZN" src="../img/header/logo.png" class="btn" height="85" width="105">
-                    
-                                    </a>	
+                                <div class="header-logo">
+										
+                                       
+                                        <a href="../index.php"> 
+                                        <img alt="RECLAMEZN" src="../img/header/logo.png" class="btn" height="150" width="170" style="border-radius: 50%">
+                          
+                                        </a>
+                                            
+                                        </div>	
                                     </div>
                                 </div>
                             </div>
@@ -179,33 +182,146 @@
         foreach($sql->select($query) as $row)
     {
         $nome = $row['nome'];
-
+        
 
 
 
     }
 
 
-        $query = "SELECT date_format(postagem_tempo, '%d/%m/%Y %H:%i') tempop,
-                  idpostagem, postagem_texto, curtida, idusuario
-           FROM tb_postagens
-           WHERE idusuario = $idusuario
-           ORDER BY idpostagem desc ";
 										
+//////////////////////////////////////////////////////QUERY DAS POSTAGENS DO INDEX
+                    $query ="SELECT    tp.idpostagem,tp.postagem_texto, tp.curtida, tp.idusuario,
+                    tp.postagem_tempo, 
+                    tup.nome nomep, date_format(tp.postagem_tempo, '%d/%m/%Y %H:%i') tempop
+                                        
+                              FROM      tb_postagens tp
+                              
+                              
+                              left join tb_usuarios   tup on tup.id = tp.idusuario
+                              WHERE idusuario = $idusuario
+                              ORDER BY tp.idpostagem desc";
+
+
+
+
    ?>     <h1>Timeline de "<?php echo "$nome"; ?>"</h1>
 	<?php										
 		foreach($sql->select($query) as $row){
-												
+
+
+									
                                                 
         echo "<h4>".$row['postagem_texto']."</h4>";
+        
+        
 ?>
                                                 <div class="post-meta">
                                                 <?php
-                                                
+                                                $nomep= $row['nomep'];
                                                 $idusuario= $row['idusuario'];
+                                                $idpostagem = $row['idpostagem'];
+                                                $curtida = $row['curtida'];
                                                
-                                                    
-                                                  echo "<span><i class= 'far fa-comments'></i> " .$row['tempop']."</span><hr>";
+                                                  echo "<span><i class='far fa-user'></i> $nomep </span>";  
+                                                  echo "<span><i class= 'far fa-comments'></i> " .$row['tempop']."</span>";
+
+                                                  echo "&nbsp;&nbsp;&nbsp;<a class='btn' style ='background-color: paleturquoise;'href='adicionar_comentario.php?id=".$row['idpostagem']."&destino=timeline&usuario=".$idusuario."'>Comentar"."</a>";
+                                                  if($user_->isAdmin() ||( $user['id'] == $idusuario)  )
+                       {  
+                         echo "&nbsp;&nbsp;&nbsp;<a class='btn btn-danger' href='deletar_postagem.php?id=".$row['idpostagem']."&destino=timeline&usuario=".$idusuario."'>Apagar Postagem"."</a>";
+                       }
+                       if( $user['id'] == $idusuario)  
+                       {  
+                         echo "&nbsp;&nbsp;&nbsp;<a class='btn btn-warning' href='editar_postagem.php?id=".$row['idpostagem']."&destino=timeline&usuario=".$idusuario."'>Editar"."</a>";
+                       }
+                       
+                       echo "&nbsp;&nbsp;&nbsp;<a class='far fa-heart' href='curtir_postagem.php?id=".$row['idpostagem']."&destino=timeline&usuario=".$idusuario."'>"."</a>";
+                       
+                       
+                       echo " $curtida <hr>";
+
+
+////////////////////////////////////QUERY DOS COMENTÁRIOS
+
+
+
+                        $query_comentario ="SELECT    idcomentario,comentario_texto, curtida, idusuario,
+                        comentario_tempo, 
+                        nome nomep, date_format(comentario_tempo, '%d/%m/%Y %H:%i') tempoc
+
+                        FROM      tb_comentario 
+
+                        left join tb_usuarios   tuc on id = idusuario
+                        WHERE idpostagem = $idpostagem
+                        ORDER BY  idcomentario ";
+                        $result_comentario = $sql->select($query_comentario);
+
+                        foreach($result_comentario as $row_comentario){
+                            ?>
+                      
+                            <!--INÍCIO DOS POSTS-->
+                            <div class="container container-fluid">
+                              
+                              <div class="row mt-5 pt-3">
+                                <div class="col-md-12">
+                                  <div class="blog-posts">
+                                    
+                                  
+                      
+                                      <div class="post-content">
+                                        <!--NOME DOS POSTS-->
+                                      
+                                        
+                                        <?php
+                                        echo "<h5>&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp".$row_comentario['comentario_texto']."</h5>";
+                                        ?>
+                                        <div class="post-meta">
+                                          <?php
+                                          $nomep= $row_comentario['nomep'];
+                                          $idusuario= $row_comentario['idusuario'];
+                                          $curtida = $row_comentario['curtida'];
+                                          echo "&nbsp;&nbsp;&nbsp<span><i class='far fa-user'></i> $nomep </span>";
+                                          
+                                          echo "<span><i class= 'far fa-comments'></i> " .$row_comentario['tempoc']."</span>";
+                                          if($user_->isAdmin() ||( $user['id'] == $idusuario)  )
+                                             {  
+                                               echo "&nbsp;&nbsp;&nbsp;<a class='btn btn-danger' href='deletar_comentario.php?id=".$row_comentario['idcomentario']."&destino=timeline&usuario=".$idusuario."'>Apagar Comentário"."</a>";
+                                             }
+                                             if( $user['id'] == $idusuario)  
+                                             {  
+                                               echo "&nbsp;&nbsp;&nbsp;<a class='btn btn-warning' href='editar_comentario.php?id=".$row_comentario['idcomentario']."&destino=timeline&usuario=".$idusuario."'>Editar Comentário"."</a>";
+                                             }
+                                             echo "&nbsp;&nbsp;&nbsp;<a class='far fa-heart' href='curtir_comentario.php?id=".$row_comentario['idcomentario']."&idpostagem=".$idpostagem."&destino=timeline&usuario=".$idusuario."'>"."</a>";
+                                             
+                                             echo " $curtida";
+                                          
+                      
+                                        ?>
+                                        </div>
+                      
+                                      </div>
+                                    </article>
+                                    
+                                  
+                      
+                      
+                      
+                      
+                                  </div>
+                                </div>
+                                
+                              </div>
+                      
+                            </div>
+                      
+                          
+                          <?php
+                          }
+
+
+
+
                                                   ?>	
                                                 </div>
                                                 <?php    

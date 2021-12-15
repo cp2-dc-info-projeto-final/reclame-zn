@@ -1,79 +1,43 @@
 
 
 <?php
+   include __DIR__ . '/../php/usuario.php';
+
+   $user = new usuario();
     
-    date_default_timezone_set('America/Sao_Paulo');
-
-
-        include __DIR__ . '/../php/usuario.php';
-        include __DIR__ . '/../php/comentario.php';
-        
-        $user_ = new usuario();
-        if(!$user_->checkLogin()){
-            header("Location: reclamezn/html/login.php");
-            exit;
-        }
-        $user = $user_->get();
-
-
+   $dados = $user->get();
 
 
         if(isset($_GET['id'])){
-            //$destino = $_GET['destino'];
-            $comentario = new comentario();
-
-
-
-            $idcomentario = $_GET['id'];
-
-            
-            $dados = $comentario->get($_GET['id']);
-            $comentario_texto = $dados['comentario_texto'];
+            $dados = $user->get($_GET['id']);
         }
-
-if(isset($_POST['registrar'])){
-    //RECEBE OS DADOS DO FORMULÁRIO
-    $comentario = $_POST['comentario'];
-    $idcomentario = $_POST['idcomentario'];
-    //VERIFICA SE O CAMPO NOME ESTÁ VAZIO
-    if(empty($comentario)){
-        echo "O campo é obrigatório!";
-    }
-
-    
-    
-
-    //INCLUI A CLASSE SQL NO CÓDIGO
-    include __DIR__."/../sql/sql.php";
-    $sql = new Sql();
-    $agora = date("Y-m-d h:i:s");
+     
+        //VERIFICA SE ESTÁ ABRINDO A PÁGINA VIA MÉTODO POST (QUANDO APERTA NO BOTÃO REGISTRAR)
+        if(isset($_POST['registrar'])){
+            //RECEBE OS DADOS DO FORMULÁRIO
+            $senha = $_POST['senha'];
+            $email = $_POST['email'];
+            $email_confirmacao = $_POST['email_confirm'];
 
 
+            //VERIFICA SE O CAMPO SENHA ESTÁ VAZIO
+            if(empty($senha)){
+                echo "A senha é obrigatória!";
+            }
 
-    //QUERY QUE ATUALIZA O COMENTÁRIO
-    $query = "UPDATE  tb_comentario SET comentario_texto = :comentario_texto, comentario_tempo = :comentario_tempo WHERE idcomentario = :idcomentario";
-  
-    
-    $sql->QuerySQL($query, array
-    (
-        ":comentario_texto" => $comentario,
-        ":comentario_tempo" => $agora,
-        ":idcomentario" => $idcomentario
-        
-  
-    )
-);
+            //INCLUI A CLASSE SQL NO CÓDIGO
+            include __DIR__."/../sql/sql.php";
+            $sql = new Sql();
 
-$usuario = $user['id'];
-if($destino == ""){
-    header("Location: ../index.php");
-    }
-    else{
-        header("Location: timeline.php?id=$usuario");
-    }
-    exit;
-}
-
+            $atualiza_dados = "UPDATE tb_usuarios SET senha = :senha WHERE id = :id" ;
+            $sql->QuerySQL($atualiza_dados, array(
+                
+                ":senha" => password_hash($senha, PASSWORD_DEFAULT),
+                ":id" => $_POST['id']
+            ));
+            header("Location: dashboard.php");
+            exit;
+        }
 
 
 ?>
@@ -104,31 +68,24 @@ if($destino == ""){
 <body>
 <div class="limiter">
     <div class="container-login100">
-
         <div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
-         <form class="login100-form validate-form flex-sb flex-w" action="editar_comentario.php" method="post">
-         <input type=hidden name =idcomentario value = "<?php echo "$idcomentario";?>" >
-                    <span class="login100-form-title p-b-32">  Editar seu Comentário  </span>
+         <form class="login100-form validate-form flex-sb flex-w" action="editar_senha.php" method="post">
+                    <span class="login100-form-title p-b-32">  Atualizar Senha</span>
 
-
-                    <span class="txt1 p-b-11"> </span>
-                    <div class="wrap-input100 validate-input m-b-36" data-validate="O e-mail é necessário">
-                       
-                        <textarea name="comentario" id="comentario" cols="40" rows="10"><?php echo "$comentario_texto";?></textarea>
+                    
+                    <div class="wrap-input100 validate-input m-b-36" data-validate="A senha é necessária">
+                    <input class="input100" type="text" name="senha" value="" >
                         <span class="focus-input100"></span>
                     </div>
 
-
-                   
-
-                 
+                    <input type="hidden" name="id" value="<?php echo $dados['id'] ?>" >
 
 
                     
-               
+
 
                 <div class="container-login100-form-btn">
-                   <button class="login100-form-btn" type="submit" name="registrar">Enviar</button>
+                   <button class="login100-form-btn" type="submit" name="registrar">Atualizar</button>
                 </div>
          </form>
         </div>

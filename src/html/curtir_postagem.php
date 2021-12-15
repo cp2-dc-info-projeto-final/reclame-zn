@@ -20,7 +20,7 @@
         if(isset($_GET['id'])){
 
             $curtida_postagem = new curtida_postagem();
-
+            $destino = $_GET['destino'];
 
             
             $idpostagem = $_GET['id'];
@@ -117,8 +117,13 @@ if($idcurtida == 0){
                 );
     }
 
-    header("Location: ../index.php");
-    exit;
+    if($destino == ""){
+        header("Location: ../index.php");
+        }
+        else{
+            header("Location: timeline.php?id=$usuario");
+        }
+        exit;
 }
 
 

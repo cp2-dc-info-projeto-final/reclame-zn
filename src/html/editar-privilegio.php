@@ -20,9 +20,9 @@
             include __DIR__."/../sql/sql.php";
             $sql = new Sql();
 
-            $atualiza_dados = "UPDATE tb_usuarios SET senha = :senha, acesso = :previlegio WHERE id = :id" ;
+            $atualiza_dados = "UPDATE tb_usuarios SET  acesso = :previlegio WHERE id = :id" ;
             $sql->QuerySQL($atualiza_dados, array(
-                ":senha" => password_hash($_POST['senha'], PASSWORD_DEFAULT),
+                
                 ":previlegio" => $_POST['privilegio'],
                 ":id" => $_POST['id']
             ));
@@ -63,11 +63,7 @@
          <form class="login100-form validate-form flex-sb flex-w" action="editar-privilegio.php" method="post">
                     <span class="login100-form-title p-b-32">  Atualizar dados</span>
 
-                    <span class="txt1 p-b-11"> Nova Senha </span>
-                    <div class="wrap-input100 validate-input m-b-36" data-validate="Uma nova senha é necessária">
-                        <input class="input100" type="password" name="senha" >
-                        <span class="focus-input100"></span>
-                    </div>
+                    
             
                     <span class="txt1 p-b-11">Privilégio</span>
                     <div class="wrap-input100 validate-input m-b-36" data-validate="O privilégio é necessário">

@@ -134,7 +134,7 @@ foreach($result as $row){
                        {  
                          echo "&nbsp;&nbsp;&nbsp;<a class='btn btn-warning' href='html/editar_comentario.php?id=".$row_comentario['idcomentario']."'>Editar Comentário"."</a>";
                        }
-                       echo "&nbsp;&nbsp;&nbsp;<a class='far fa-heart' href='html/curtir_comentario.php?id=".$row_comentario['idcomentario']."'>"."</a>";
+                       echo "&nbsp;&nbsp;&nbsp;<a class='far fa-heart' href='html/curtir_comentario.php?id=".$row_comentario['idcomentario']."&idpostagem=".$idpostagem."'>"."</a>";
                        
                        echo " $curtida";
                     

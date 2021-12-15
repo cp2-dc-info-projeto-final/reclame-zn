@@ -21,7 +21,7 @@
         if(isset($_GET['id'])){
 
             $postagem_ = new postagem();
-
+            $destino = $_GET['destino'];
 
 
             $idpostagem = $_GET['id'];
@@ -62,7 +62,13 @@ if(isset($_POST['registrar'])){
   
     )
 );
+$usuario = $user['id'];
+if($destino == ""){
     header("Location: ../index.php");
+    }
+    else{
+        header("Location: timeline.php?id=$usuario");
+    }
     exit;
 }
 

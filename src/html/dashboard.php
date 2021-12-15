@@ -74,7 +74,7 @@
             }
         </style>
 
-		<header style="background-color:#14213D;" id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
+		<header style="background-color:#14213D;" id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 100}">
 				<div style="background-color:#14213D;" class="header-body border-top-0">
 					<div class="header-container container-fluid px-lg-4">
 						<div class="header-row" style="background-color:#14213D;">
@@ -83,9 +83,9 @@
 									<div class="header-logo">
 										
 									<a href="../index.php"> 
-										<img alt="RECLAMEZN" src="../img/header/logo.png" class="btn" height="85" width="105">
-						  
-										</a>	
+                                        <img alt="RECLAMEZN" src="../img/header/logo.png" class="btn" height="150" width="170" style="border-radius: 50%">
+                          
+                                        </a>
 										
 									</div>
 								</div>
@@ -112,6 +112,13 @@
 							<div class="header-column header-column-border-left flex-grow-0 justify-content-center">
 								<div class="justify-content-end">
                                         <a class="btn text-white font-weight-bold"  style='background-color:#FCA311;' href="editar.php">Editar Minha Conta</a>
+								</div>
+                                
+							</div>
+
+							<div class="header-column header-column-border-left flex-grow-0 justify-content-center">
+								<div class="justify-content-end">
+                                        <a class="btn text-white font-weight-bold"  style='background-color:#FCA311;' href="editar_senha.php">Editar Minha Senha</a>
 								</div>
                                 
 							</div>
