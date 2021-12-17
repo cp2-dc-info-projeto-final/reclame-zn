@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 15-Dez-2021 às 21:06
+-- Tempo de geração: 17-Dez-2021 às 17:10
 -- Versão do servidor: 10.4.21-MariaDB
 -- versão do PHP: 8.0.12
 
@@ -242,12 +242,10 @@ ALTER TABLE `tb_postagens`
 --
 ALTER TABLE `tb_usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
-
-DROP USER IF EXISTS 'admin'@'localhost';
-
-CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin123';
-
-GRANT ALL PRIVILEGES ON db_reclamezn.* TO 'admin'@'localhost';
+DROP USER 'adm';
+CREATE USER 'adm'@'%' IDENTIFIED BY 'adm123';
+GRANT ALL PRIVILEGES ON *.* TO 'adm'@'%' REQUIRE NONE WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+GRANT ALL PRIVILEGES ON `db_reclamezn`.* TO 'adm'@'%';
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
