@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 17-Dez-2021 às 17:10
+-- Tempo de geração: 18-Dez-2021 às 20:58
 -- Versão do servidor: 10.4.21-MariaDB
 -- versão do PHP: 8.0.12
 
@@ -20,16 +20,20 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `db_reclamezn`
 --
-CREATE DATABASE IF NOT EXISTS `db_reclamezn` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `db_reclamezn`;
 
 -- --------------------------------------------------------
+
+
+DROP DATABASE IF EXISTS db_reclamezn;
+
+CREATE DATABASE db_reclamezn;
+
+USE db_reclamezn;
 
 --
 -- Estrutura da tabela `tb_comentario`
 --
 
-DROP TABLE IF EXISTS `tb_comentario`;
 CREATE TABLE `tb_comentario` (
   `idcomentario` int(11) NOT NULL,
   `comentario_texto` longtext NOT NULL,
@@ -47,7 +51,7 @@ INSERT INTO `tb_comentario` (`idcomentario`, `comentario_texto`, `curtida`, `com
 (26, ' Muito complicado isso, Iverson', 1, '2021-12-09 07:09:22', 34, 32),
 (28, ' exemplo exemplo', 0, '2021-12-11 10:12:23', 46, 40),
 (51, ' situação horrível', 2, '2021-12-15 16:34:03', 36, 45),
-(52, ' eu também!', 1, '2021-12-15 16:59:34', 64, 36);
+(52, ' eu também!', 2, '2021-12-15 16:59:34', 64, 36);
 
 -- --------------------------------------------------------
 
@@ -55,7 +59,6 @@ INSERT INTO `tb_comentario` (`idcomentario`, `comentario_texto`, `curtida`, `com
 -- Estrutura da tabela `tb_curtidas_comentarios`
 --
 
-DROP TABLE IF EXISTS `tb_curtidas_comentarios`;
 CREATE TABLE `tb_curtidas_comentarios` (
   `idcurtida` int(11) NOT NULL,
   `idusuario` int(11) NOT NULL,
@@ -75,7 +78,8 @@ INSERT INTO `tb_curtidas_comentarios` (`idcurtida`, `idusuario`, `idcomentario`,
 (28, 35, 51, 36),
 (29, 44, 51, 36),
 (30, 44, 26, 34),
-(31, 36, 52, 64);
+(31, 36, 52, 64),
+(33, 34, 52, 64);
 
 -- --------------------------------------------------------
 
@@ -83,7 +87,7 @@ INSERT INTO `tb_curtidas_comentarios` (`idcurtida`, `idusuario`, `idcomentario`,
 -- Estrutura da tabela `tb_curtidas_postagens`
 --
 
-DROP TABLE IF EXISTS `tb_curtidas_postagens`;
+
 CREATE TABLE `tb_curtidas_postagens` (
   `idcurtida` int(11) NOT NULL,
   `idusuario` int(11) NOT NULL,
@@ -120,7 +124,6 @@ INSERT INTO `tb_curtidas_postagens` (`idcurtida`, `idusuario`, `idpostagem`) VAL
 -- Estrutura da tabela `tb_postagens`
 --
 
-DROP TABLE IF EXISTS `tb_postagens`;
 CREATE TABLE `tb_postagens` (
   `idpostagem` int(11) NOT NULL,
   `postagem_texto` longtext NOT NULL,
@@ -147,7 +150,6 @@ INSERT INTO `tb_postagens` (`idpostagem`, `postagem_texto`, `curtida`, `postagem
 -- Estrutura da tabela `tb_usuarios`
 --
 
-DROP TABLE IF EXISTS `tb_usuarios`;
 CREATE TABLE `tb_usuarios` (
   `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
@@ -174,6 +176,14 @@ INSERT INTO `tb_usuarios` (`id`, `nome`, `email`, `senha`, `acesso`) VALUES
 (43, 'Usuário Comum', 'usuario@gmail.com', '$2y$10$/YDd8qGZi2G4BtmDs6mafO3/KPbegmKS556qHaXqSNwSUJtHLiwJ2', 0),
 (44, 'Ygor Canalli', 'ygor@gmail.com', '$2y$10$xhyEIww4ehrWIeDdh5RaUe5wuy9OfY7g/sc45WHPbHX5vSqvUZuh.', 1),
 (45, 'Guilherme Paixão', 'guilherme@gmail.com', '$2y$10$59hLr9b5k5tR0qL/.NqXbu/UPWTyfb7U6/TW2Q3cy//maYQBu47oy', 1);
+
+DROP USER IF EXISTS 'adm'@'localhost';
+
+CREATE USER 'adm'@'localhost' IDENTIFIED BY 'adm123';
+
+GRANT ALL PRIVILEGES ON db_reclamezn.* TO 'adm'@'localhost';
+
+
 
 --
 -- Índices para tabelas despejadas
@@ -223,7 +233,7 @@ ALTER TABLE `tb_comentario`
 -- AUTO_INCREMENT de tabela `tb_curtidas_comentarios`
 --
 ALTER TABLE `tb_curtidas_comentarios`
-  MODIFY `idcurtida` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `idcurtida` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT de tabela `tb_curtidas_postagens`
@@ -242,10 +252,6 @@ ALTER TABLE `tb_postagens`
 --
 ALTER TABLE `tb_usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
-DROP USER 'adm';
-CREATE USER 'adm'@'%' IDENTIFIED BY 'adm123';
-GRANT ALL PRIVILEGES ON *.* TO 'adm'@'%' REQUIRE NONE WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
-GRANT ALL PRIVILEGES ON `db_reclamezn`.* TO 'adm'@'%';
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
